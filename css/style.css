@@ -388,6 +388,9 @@ body{
 }
 .team_member{
 	padding-left: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
 .position{
 	font-weight: 200;

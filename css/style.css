@@ -397,6 +397,10 @@ body {
 	color: rgba(255, 255, 255, 0.6);
 }
 
+.mySwiper .swiper-slide {
+	cursor: url(../img/cursor.png), auto;
+}
+
 .careers {
 	background-color: #000000;
 	position: relative;

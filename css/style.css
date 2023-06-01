@@ -424,3 +424,73 @@ body{
 	height: 100%;
 	background: linear-gradient(88.91deg, #CC9177 2.38%, #E5B59E 26.1%, #C18369 52.72%, #EAB498 73.58%, #E6A483 100.04%), #D3A188;
 }
+
+.projects{
+	background-image: linear-gradient(to top,#1E1E1E, #000000);
+	background-position-x: right;	
+	background-repeat:   no-repeat;
+	padding-bottom: 220PX;
+	position: relative;
+}
+
+.projects .gradient{
+	position: absolute;
+	right: 0;
+}
+.project__item{
+	display: flex;
+	height: 600px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.project_left{
+	padding-right: 70px;
+}
+
+.project_name{
+	font-size: 64px;
+	line-height: 110%;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+}
+
+.project_desc{
+	font-weight: 300;
+	font-size: 28px;
+	line-height: 120%;
+	margin-bottom: 24px;
+}
+
+.project_img{
+	width: 600px;
+	height: 600px;
+}
+
+.reverse{
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.reverse .project_left{
+	padding-right: 20px;
+	padding-left: 70px;
+}
+
+.hiring{
+	background-color: #000000;
+}
+
+.hiring_inner{
+	padding: 77px 0 111px 0; 
+	display: flex;
+}
+
+.hiring_left .title{
+	font-size: 52px;
+	line-height: 110%;
+}
+
+.hiring_left .descr{
+
+}

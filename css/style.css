@@ -250,6 +250,62 @@ body {
 	background-clip: text;
 }
 
+#checkbox,
+.menu_toggle {
+	display: none;
+}
+
+.toggle {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	transition-duration: .5s;
+}
+
+.bars {
+	width: 100%;
+	height: 2px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 4px;
+}
+
+#bar2 {
+	transition-duration: .8s;
+}
+
+#checkbox:checked+.toggle .bars {
+	position: absolute;
+	transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar2 {
+	transform: scaleX(0);
+	transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar1 {
+	width: 100%;
+	transform: rotate(45deg);
+	transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar3 {
+	width: 100%;
+	transform: rotate(-45deg);
+	transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle {
+	transition-duration: .5s;
+	transform: rotate(180deg);
+}
+
 .hero_text {
 	display: flex;
 	justify-content: center;
@@ -634,7 +690,7 @@ body {
 
 .footer {
 	background-color: #060605;
-	padding: 120px 72px;
+	padding: 120px 0;
 }
 
 .footer .container {
@@ -673,3 +729,97 @@ body {
 .social_icon:hover.social_icon svg path {
 	fill: #D3A188;
 }
+
+@media (max-width: 1200px) {
+	.container {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+}
+
+@media (max-width: 755px) {
+	.nav {
+		display: none;
+	}
+
+	.menu_toggle {
+		display: block;
+	}
+
+	.hero {
+		min-height: auto;
+		padding-top: 160px;
+		padding-bottom: 24px;
+	}
+
+	.ax {
+		font-size: 16px;
+		line-height: 120%;
+	}
+
+	.utp {
+		font-weight: 200;
+		font-size: 32px;
+		line-height: 110%;
+	}
+
+	.utp_slogan {
+		font-size: 16px;
+		line-height: 150%;
+		width: auto;
+	}
+
+	.video {
+		padding-bottom: 120px;
+	}
+
+	.video .container {
+		padding: 0 !important;
+	}
+
+	.video__inner {
+		top: 0;
+	}
+
+	.video_img {
+		height: 473px;
+	}
+
+	.play {
+		width: 95px;
+	}
+
+	.mySwiper .swiper-slide {
+		max-width: 274px !important;
+		height: 284px !important;
+	}
+
+	.prev-next {
+		display: none;
+	}
+
+	.our_projects {
+		padding-bottom: 50px;
+	}
+
+	.title {
+		font-weight: 200;
+		font-size: 36px;
+		line-height: 110%;
+	}
+
+	.careers .title {
+		margin-bottom: 8px;
+	}
+
+	.vacation_right {
+		display: none;
+	}
+
+	.vacation_left {
+		width: 100%;
+	}
+
+}
+
+@media (max-widtg: 480px) {}

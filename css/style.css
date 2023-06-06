@@ -170,7 +170,7 @@ a {
 	top: var(--move-y);
 	transform: translate(-50%, -50%);
 
-	will-change: transform;
+	will-change: left, top;
 
 	background: linear-gradient(61.77deg, #E6AD83 33.48%, #E5BC9E 39.83%, #E6AD83 51.52%, #FADEC4 69.34%, #E6AD83 75.58%), #9F6A48;
 	/* This defines the color of the cursor */
@@ -686,7 +686,7 @@ body {
 
 .project__item {
 	display: flex;
-	height: 100vh;
+	height: 90vh;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -910,5 +910,10 @@ body {
 
 	.swiper-slide-active {
 		max-width: 91vw !important;
+		transition: all 0.3s ease-out;
+	}
+
+	.swiper-slide {
+		transition: all 0.3s ease-out;
 	}
 }

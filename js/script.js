@@ -1,15 +1,22 @@
 var swiper = new Swiper(".mySwiper", {
 
     grabCursor: true,
+    mousewheel: {
+
+        sensitivity: 1,
+        releaseOnEdges: true,
+    },
+
     breakpoints: {
         // when window width is >= 320px
         320: {
             slidesPerView: 1,
-            spaceBetween: 16
+            spaceBetween: 16,
+            centeredSlides: true,
         },
         // when window width is >= 480px
         480: {
-            slidesPerView: 'auto',
+            slidesPerView: '4',
             spaceBetween: 32,
         },
 
@@ -17,8 +24,11 @@ var swiper = new Swiper(".mySwiper", {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    }
+    },
 });
+
+swiper.width = 1200;
+
 
 
 $(() => {
@@ -123,3 +133,5 @@ document.addEventListener('mousemove', e => {
 		`
     })
 })
+
+

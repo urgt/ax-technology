@@ -1,6 +1,5 @@
 var swiper = new Swiper(".mySwiper", {
 
-    grabCursor: true,
     mousewheel: {
 
         sensitivity: 1,
@@ -27,7 +26,7 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-swiper.width = 1200;
+
 
 
 
@@ -121,17 +120,29 @@ $(() => {
 var swiper = new Swiper(".mySwiper2", {
     slidesPerView: 'auto',
     spaceBetween: 12,
-    grabCursor: true
+    mousewheel: {
+
+        sensitivity: 1,
+        releaseOnEdges: true,
+    },
 });
 
+(function () {
+    const cursor = document.querySelector('.cursor2');
+    gsap.set(cursor, {
+        xPercent: -50,
+        yPercent: -50,
+    });
+    document.addEventListener('pointermove', movecursor);
+    function movecursor(e) {
+        gsap.to(cursor, {
+            duration: 0.3,
+            x: e.clientX,
+            y: e.clientY,
+        });
+    }
+})();
 
-document.addEventListener('mousemove', e => {
-    Object.assign(document.documentElement, {
-        style: `
-		--move-x: ${e.clientX}px;
-		--move-y: ${e.clientY}px;
-		`
-    })
-})
+
 
 

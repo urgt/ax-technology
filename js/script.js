@@ -1,5 +1,9 @@
-var swiper = new Swiper(".mySwiper", {
 
+//slider our projects
+
+var swiper = new Swiper(".mySwiper", {
+    draggable: true,
+    grabCursor: true,
     mousewheel: {
 
         sensitivity: 1,
@@ -20,6 +24,17 @@ var swiper = new Swiper(".mySwiper", {
         },
 
     },
+
+});
+
+
+//slider our team
+
+var swiper = new Swiper(".mySwiper2", {
+    draggable: true,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    spaceBetween: 12,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -28,7 +43,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
-
+// custom cursor hovers
 
 $(() => {
 
@@ -41,12 +56,34 @@ $(() => {
                 $('.cursor2').addClass('active');
 
             });
+            $('.portfolio').on('mouseenter', function () {
+
+                $('.cursor2').addClass('active');
+
+            });
+
+            $('.form_submit').on('mouseenter', function () {
+
+                $('.cursor2').addClass('active');
+
+            });
 
         });
 
         $(window).mousemove(function (e) {
 
             $('a').on('mouseleave', function () {
+
+                $('.cursor2').removeClass('active');
+
+            });
+            $('.portfolio').on('mouseleave', function () {
+
+                $('.cursor2').removeClass('active');
+
+            });
+
+            $('.form_submit').on('mouseleave', function () {
 
                 $('.cursor2').removeClass('active');
 
@@ -117,15 +154,8 @@ $(() => {
 
 });
 
-var swiper = new Swiper(".mySwiper2", {
-    slidesPerView: 'auto',
-    spaceBetween: 12,
-    mousewheel: {
 
-        sensitivity: 1,
-        releaseOnEdges: true,
-    },
-});
+// custom cursor 
 
 (function () {
     const cursor = document.querySelector('.cursor2');
@@ -142,7 +172,3 @@ var swiper = new Swiper(".mySwiper2", {
         });
     }
 })();
-
-
-
-

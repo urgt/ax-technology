@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div class="cursor2 cursor-dot"></div>
     <div class="wrapper">
         <section class="hero">
             <header class="header">
@@ -70,10 +71,7 @@
                     <div class="swiper-slide"><img src="/img/slide1.jpg" alt="Slide1"></div>
                 </div>
             </div>
-            <div class="prev-next container">
-                <div class="swiper-button-prev">PREV</div>
-                <div class="swiper-button-next">NEXT</div>
-            </div>
+
 
         </section>
 
@@ -249,6 +247,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="prev-next container">
+                        <div class="swiper-button-prev">PREV</div>
+                        <div class="swiper-button-next">NEXT</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -316,16 +318,74 @@
 
         <section class="hiring">
             <div class="hiring_inner container">
-                <div class="hire_left">
-                    <p class="title">Мы всегда в поисках новых талантов</p>
-                    <p class="descr">Неважно в какой области современного ИТ-направления вы специализируетесь, если
-                        вы
-                        готовы работать, совершенствоваться и развиваться в новой команде, то у нас найдутся для вас
-                        интересные предложения и возможности.</p>
+                <div class="hire_top">
+                    <div class="hire_left">
+                        <img src="img/hire-min.jpg" alt="we are hiring" class="hire_img">
+
+                    </div>
+                    <div class="hire_right">
+                        <p class="title">Мы всегда в поисках новых талантов</p>
+                        <p class="descr">Неважно в какой области современного ИТ-направления вы специализируетесь, если
+                            вы
+                            готовы работать, совершенствоваться и развиваться в новой команде, то у нас найдутся для вас
+                            интересные предложения и возможности.</p>
+                    </div>
                 </div>
-                <div class="hire_right">
-                    <img src="img/hire-min.jpg" alt="we are hiring" class="hire_img">
-                    <a href="#"><img src="img/arrow.svg" alt="arrow"></a>
+                <div class="hire_bottom">
+                    <div class="hire_cta">
+                        <p class="title">Давайте работать вместе!</p>
+                        <p class="descr">Заполните анкету и станьте частью нашей команды! Участвуя в создании и
+                            реализации новых потрясающих проектов. </p>
+                    </div>
+                    <div class="login-box">
+
+                        <form action="/" method="post" title="Давайте работать вместе!">
+                            <div class="user-box">
+                                <input type="text" name="" required>
+                                <label>ФИО</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="email" name="" required>
+                                <label>Почта</label>
+                            </div>
+
+                            <div class="user-box">
+                                <input type="text" name="" required>
+                                <label>Сопроводительное сообщение</label>
+                            </div>
+
+                            <div class="file-box">
+                                <div><label>Портфолио</label></div>
+                                <input id="ax_file_portfolio" type="file" name="ax_file_portfolio" style="display:none">
+                                <div class="portfolio" onclick="document.getElementById('ax_file_portfolio').click()">
+
+                                    <div class="porfolio__icon">
+                                        <img src="/img/circum_save-down-2.svg" alt="Загрузить портфолио">
+                                        <p>Загрузить портфолио</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="file-box">
+                                <div><label>Резюме</label></div>
+                                <input id="ax_file_resume" type="file" name="ax_file_resume" style="display:none">
+                                <div class="portfolio" onclick="document.getElementById('ax_file_resume').click()">
+
+                                    <div class="porfolio__icon">
+                                        <img src="/img/circum_save-down-2.svg" alt="Загрузить портфолио">
+                                        <p>Загрузить резюме</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <button class="form_submit">ОТПРАВИТЬ</button>
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -393,9 +453,9 @@
             </div>
         </footer>
 
-        <div class="cursor2 cursor-dot"></div>
 
-    </div>
+
+
     </div>
 
 
@@ -410,7 +470,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <!-- <script src="js/smoother.js"> </script> -->
     <script src="js/script.js"> </script>
 
 

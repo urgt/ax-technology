@@ -442,7 +442,7 @@ body {
 
 .our_projects {
 	background: #000000;
-	padding-bottom: 200px;
+	padding-bottom: 125px;
 }
 
 .our_projects .container {
@@ -495,7 +495,7 @@ body {
 
 .prev-next {
 	position: relative;
-	margin-top: 35px;
+	margin-top: 70px;
 }
 
 
@@ -604,7 +604,7 @@ body {
 
 .our_team {
 	background-color: #000000;
-	padding-bottom: 160px;
+	padding-bottom: 100px;
 }
 
 .our_team .container {
@@ -670,7 +670,7 @@ body {
 	background-image: url(../img/2.png), linear-gradient(to top, #080808, #000000);
 	background-position-x: right;
 	background-repeat: no-repeat;
-	padding-bottom: 220PX;
+	padding-bottom: 200px;
 	position: relative;
 }
 
@@ -682,12 +682,10 @@ body {
 .projects__inner {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
 }
 
 .project__item {
 	display: flex;
-	height: 90vh;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -715,55 +713,146 @@ body {
 	height: 600px;
 }
 
-.reverse {
-	display: flex;
-	flex-direction: row-reverse;
-}
-
-.reverse .project_left {
-	padding-right: 20px;
-	padding-left: 70px;
-}
-
 .hiring {
-	background-color: #060605;
+	background: #080808;
+	padding-bottom: 160px;
 }
 
-.hiring_inner {
-	padding: 77px 0 111px 0;
+
+.hire_top {
 	display: flex;
+	gap: 103px;
+	margin-bottom: 160px;
+}
+
+.hire_right {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	gap: 50px;
 }
 
-.hire_left .title {
+.hire_right .title {
+	padding: 0 10px;
+}
+
+.hire_bottom {
+	display: flex;
+}
+
+.hire_cta .title {
+	font-weight: 100;
+	font-size: 64px;
+	line-height: 110%;
+	padding: 0 30px 0 10px;
+	text-transform: uppercase;
+	margin-bottom: 32px;
+}
+
+.hire_cta .descr {
+	padding: 0 132px 0 0;
+}
+
+.login-box {
+
+	width: 100%;
+	box-sizing: border-box;
+}
+
+
+.login-box .user-box {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+
+.login-box .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 0.5px solid #fff;
+	outline: none;
+	background: transparent;
+}
+
+.login-box .user-box label {
+	position: absolute;
+	top: 0;
+	left: 0;
 	font-style: normal;
 	font-weight: 200;
-	font-size: 52px;
-	line-height: 110%;
-	text-transform: uppercase;
-	margin-bottom: 51px;
-	width: 455px;
-
-}
-
-.hire_left .descr {
 	font-size: 16px;
 	line-height: 150%;
-	padding-left: 150px;
+	pointer-events: none;
+	transition: all .5s ease-out;
 }
 
-.hire_img {
-	position: relative;
-	margin-top: -135px;
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+	top: -20px;
+	left: 0;
+	color: #bdb8b8;
+	font-size: 12px;
+	transition: all .5s ease-out;
 }
 
-.hire_right a {
-	display: inline-flex;
+.file-box {
+	margin-bottom: 30px;
+}
+
+
+
+input[type=file]::file-selector-button {
+	border: 2px solid #6c5ce7;
+	display: none;
+	padding: .2em .4em;
+	border-radius: .2em;
+	background-color: #a29bfe;
+	transition: 1s;
+}
+
+input[type=file]::file-selector-button:hover {
+	background-color: #81ecec;
+	border: 2px solid #00cec9;
+}
+
+
+.portfolio {
+	cursor: pointer;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 18px 44px;
-	border: 1.5px solid #D3A188;
-	margin-top: 59px;
+	margin-top: 18px;
+	width: 100%;
+	height: 100px;
+	background-image: repeating-linear-gradient(12deg, #D3A18880, #D3A18880 16px, transparent 16px, transparent 34px, #D3A18880 34px), repeating-linear-gradient(102deg, #D3A18880, #D3A18880 16px, transparent 16px, transparent 34px, #D3A18880 34px), repeating-linear-gradient(192deg, #D3A18880, #D3A18880 16px, transparent 16px, transparent 34px, #D3A18880 34px), repeating-linear-gradient(282deg, #D3A18880, #D3A18880 16px, transparent 16px, transparent 34px, #D3A18880 34px);
+	background-size: 0.5px 100%, 100% 0.5px, 0.5px 100%, 100% 0.5px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+.porfolio__icon {
+	text-align: center;
+	color: #D3A188;
+}
+
+.porfolio__icon p {
+
+	text-align: center;
+	color: #D3A188;
+}
+
+.form_submit {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	padding: 18px 0;
+	background: none;
+	color: #D3A188;
+	border: 1px solid #D3A188;
 }
 
 .block {

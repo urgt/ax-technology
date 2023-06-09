@@ -3,7 +3,7 @@
 var swiper = new Swiper(".mySwiper", {
     draggable: true,
     grabCursor: true,
-    allowTouchMove:false,
+    allowTouchMove: false,
     loop: true,
     autoplay: {
         delay: 0,
@@ -46,7 +46,25 @@ var swiper = new Swiper(".mySwiper2", {
     },
 });
 
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
+// create the smooth scroller FIRST!
+
+ScrollSmoother.create({
+    wrapper: '.wrapper',
+    content: '.content',
+    smooth: 1.5,
+    effects: true
+})
+
+const myText = new SplitType('.anim-title')
+
+gsap.to('.char', {
+    y: 0,
+    stagger: 0.05,
+    delay: 0.2,
+    duration: .1
+})
 
 // custom cursor hovers
 

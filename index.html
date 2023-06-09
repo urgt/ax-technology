@@ -14,7 +14,7 @@
 
 <body>
     <div class="cursor2 cursor-dot"></div>
-    <div class="wrapper">
+    <div class="wrapper" id="smooth-content">
         <section class="hero">
             <header class="header">
                 <div class="container">
@@ -41,7 +41,7 @@
             </header>
             <div class="hero_text">
                 <div class="ax luxury">AX Technology</div>
-                <div class="utp">компания инновационной ИТ-разработки</div>
+                <div class="utp anim-title">компания инновационной ИТ-разработки</div>
                 <div class="utp_slogan">Команда ИТ-разработчиков международного уровня по реализации и развитию
                     масштабных бизнес-идей</div>
             </div>
@@ -56,7 +56,7 @@
 
         <section class="our_projects">
             <div class="our_projects__inner container">
-                <h3 class="title">Наши проекты</h3>
+                <h3 class="title">Делаем крутые вещи</h3>
             </div>
             <div class="swiper mySwiper container">
                 <div class="swiper-wrapper">
@@ -86,7 +86,7 @@
                     вакансии:</p>
 
                 <div class="vacation">
-                    <div class="line"></div>
+                    <div class="ax-line"></div>
                     <div class="vacation_content">
                         <div class="vacation_left">
                             <div class="vacation_title">
@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 <div class="vacation">
-                    <div class="line"></div>
+                    <div class="ax-line"></div>
                     <div class="vacation_content">
                         <div class="vacation_left">
                             <div class="vacation_title">
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <div class="vacation">
-                    <div class="line"></div>
+                    <div class="ax-line"></div>
                     <div class="vacation_content">
                         <div class="vacation_left">
                             <div class="vacation_title">
@@ -162,7 +162,7 @@
             <div class="our_team_inner container">
                 <div class="team_top">
                     <h3 class="title">
-                        НАША КОМАНДА
+                        Наша команда
                     </h3>
                     <p class="subtitle">
                         AX Technology всегда заинтересованы в специалистах, желающих развиваться, участвовать в
@@ -256,6 +256,9 @@
         </section>
 
         <section class="projects">
+            <div class="our_projects__inner container">
+                <h3 class="title">Наши проекты</h3>
+            </div>
             <div class="projects__inner container">
                 <div class="project__item">
                     <div class="project_left">
@@ -405,7 +408,7 @@
                     </ul>
                 </nav>
 
-                <div class="line"></div>
+                <div class="ax-line"></div>
 
 
 
@@ -471,6 +474,39 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script src="js/script.js"> </script>
+
+
+    <!-- smooth scroll -->
+    <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js?r=v3.12.0"></script>
+
+    <script>
+
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+        ScrollTrigger.normalizeScroll(true)
+
+        // create the smooth scroller FIRST!
+        let smoother = ScrollSmoother.create({
+        smooth: 1.5,
+        effects: true,
+        });
+
+    </script>
+
+
+    <!-- split type (headings animation) -->
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script>
+        const myText = new SplitType('.anim-title')
+
+        gsap.to('.char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: .1
+        })
+    </script>
 
 
 </body>

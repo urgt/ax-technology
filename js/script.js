@@ -4,11 +4,17 @@
 var swiper = new Swiper(".mySwiper", {
     draggable: true,
     grabCursor: true,
-    mousewheel: {
-
-        sensitivity: 1,
-        releaseOnEdges: true,
+    allowTouchMove:false,
+    loop: true,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
     },
+    speed: 5000,
+    // mousewheel: {
+    //     sensitivity: 1,
+    //     releaseOnEdges: true,
+    // },
 
     breakpoints: {
         // when window width is >= 320px
@@ -19,7 +25,7 @@ var swiper = new Swiper(".mySwiper", {
         },
         // when window width is >= 480px
         480: {
-            slidesPerView: '4',
+            slidesPerView: '6',
             spaceBetween: 32,
         },
 

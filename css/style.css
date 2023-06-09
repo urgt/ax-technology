@@ -918,7 +918,7 @@ input[type=file]::file-selector-button:hover {
 }
 
 
-/* headings animations */
+/* heading animation */
 .anim-title .line {
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 	line-height: 100%;
@@ -926,6 +926,11 @@ input[type=file]::file-selector-button:hover {
 .anim-title .char {
 	transform: translateY(115px);
 	transition: transform .5s;
+}
+
+/* carousel autoplay */
+.mySwiper .swiper-wrapper{
+    transition-timing-function: linear;
 }
 
 

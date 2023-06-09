@@ -518,17 +518,19 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="js/gsap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/ScrollSmoother.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
 
     <script src="js/script.js"> </script>
 
 
     <!-- smooth scroll -->
-    <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js?r=v3.12.0"></script>
+
 
     <script>
 
@@ -538,15 +540,14 @@
 
         // create the smooth scroller FIRST!
         let smoother = ScrollSmoother.create({
-        smooth: 1.5,
-        effects: true,
+            smooth: 1.5,
+            effects: true,
         });
 
     </script>
 
 
     <!-- split type (heading animation) -->
-    <script src="https://unpkg.com/split-type"></script>
 
     <script>
         const myText = new SplitType('.anim-title')
@@ -558,11 +559,6 @@
             duration: .1
         })
     </script>
-
-
-
-
-
 
 </body>
 

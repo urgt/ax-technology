@@ -1,4 +1,3 @@
-
 //slider our projects
 
 var swiper = new Swiper(".mySwiper", {
@@ -172,3 +171,19 @@ $(() => {
         });
     }
 })();
+
+//  Mobile menu toggle
+
+function toggleMenu() {
+
+    let opened = $('.nav').attr('id');
+
+    if (typeof opened !== 'undefined' && opened !== false) {
+        $('.nav').removeAttr('id');
+    } else {
+        $('.nav').attr('id', 'nav-open');
+    }
+
+}
+
+

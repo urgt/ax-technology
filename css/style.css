@@ -133,7 +133,6 @@ table {
 
 a:link,
 a {
-	color: inherit;
 	text-decoration: none;
 	outline: none;
 }
@@ -586,6 +585,10 @@ body {
 	text-transform: uppercase;
 }
 
+.more_arrov {
+	display: none;
+}
+
 .vacation_subtitle {
 	font-weight: 200;
 	font-size: 16px;
@@ -948,8 +951,26 @@ input[type=file]::file-selector-button:hover {
 	margin-bottom: 180px;
 }
 
+.gallery img {
+	width: 530px;
+	height: 390px;
+	object-fit: cover;
+	object-position: center;
+}
+
 .gallery img.higher {
 	margin-bottom: 65px;
+}
+
+.teambuildings .gallery img {
+	width: 480px;
+	height: 302px;
+}
+
+.teambuildings .gallery img.narrow {
+	width: 282px;
+	height: 383px;
+
 }
 
 .top_team {
@@ -977,6 +998,8 @@ input[type=file]::file-selector-button:hover {
 	margin-bottom: 160px;
 }
 
+
+
 @media (max-width: 1200px) {
 	.container {
 		padding-left: 20px !important;
@@ -985,9 +1008,7 @@ input[type=file]::file-selector-button:hover {
 }
 
 @media (max-width: 755px) {
-	.nav {
-		display: none;
-	}
+
 
 	.nav .socials {
 		display: flex;
@@ -1014,7 +1035,7 @@ input[type=file]::file-selector-button:hover {
 		padding: 0;
 	}
 
-	#nav-open {
+	.nav {
 		display: flex;
 		flex-direction: column;
 		position: absolute;
@@ -1030,14 +1051,12 @@ input[type=file]::file-selector-button:hover {
 		background-position: left center;
 		background-repeat: no-repeat;
 		background-size: contain;
-
-
-
 	}
 
 	.nav__menu {
 		flex-direction: column;
 		justify-content: center;
+		flex-wrap: nowrap;
 		align-items: center;
 		width: 100%;
 		height: 100%;
@@ -1112,7 +1131,7 @@ input[type=file]::file-selector-button:hover {
 		margin-bottom: 8px;
 	}
 
-	.vacation_right {
+	.vacation_link {
 		display: none;
 	}
 
@@ -1120,8 +1139,21 @@ input[type=file]::file-selector-button:hover {
 		width: 100%;
 	}
 
+	.vacation_title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 
+	.vacation_title p {
+		width: 80%;
+	}
 
+	.more_arrov {
+		display: block;
+		width: 20%;
+		text-align: right;
+	}
 
 }
 

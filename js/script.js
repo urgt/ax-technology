@@ -172,18 +172,36 @@ $(() => {
     }
 })();
 
+if (($(window).width()) < 755) {
+    $('.nav').hide();
+    $('.vacation_subtitle').hide();
+}
+
+$('.vacation_title').on('click', function () {
+    if (($(window).width()) < 755) {
+        $('.vacation_subtitle').not($(this).siblings('.vacation_subtitle')).hide('slide');
+        $(this).parent().find('.vacation_subtitle').slideToggle('fast');
+    }
+});
+
+
+$(window).resize(function () {
+
+    if (($(window).width()) < 755) {
+        $('.nav').hide();
+        $('.vacation_subtitle').hide();
+    } else {
+        $('.nav').show();
+        $('.vacation_subtitle').show();
+    }
+
+});
+
+
 //  Mobile menu toggle
 
 function toggleMenu() {
-
-    let opened = $('.nav').attr('id');
-
-    if (typeof opened !== 'undefined' && opened !== false) {
-        $('.nav').removeAttr('id');
-    } else {
-        $('.nav').attr('id', 'nav-open');
-    }
-
+    $('.nav').slideToggle()('fast');
 }
 
 

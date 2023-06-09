@@ -1,4 +1,3 @@
-
 //slider our projects
 
 var swiper = new Swiper(".mySwiper", {
@@ -178,3 +177,37 @@ $(() => {
         });
     }
 })();
+
+if (($(window).width()) < 755) {
+    $('.nav').hide();
+    $('.vacation_subtitle').hide();
+}
+
+$('.vacation_title').on('click', function () {
+    if (($(window).width()) < 755) {
+        $('.vacation_subtitle').not($(this).siblings('.vacation_subtitle')).hide('slide');
+        $(this).parent().find('.vacation_subtitle').slideToggle('fast');
+    }
+});
+
+
+$(window).resize(function () {
+
+    if (($(window).width()) < 755) {
+        $('.nav').hide();
+        $('.vacation_subtitle').hide();
+    } else {
+        $('.nav').show();
+        $('.vacation_subtitle').show();
+    }
+
+});
+
+
+//  Mobile menu toggle
+
+function toggleMenu() {
+    $('.nav').slideToggle()('fast');
+}
+
+

@@ -539,6 +539,15 @@ body {
 	position: relative;
 }
 
+.careers::before {
+	content: url('/img/2.png');
+	transform: scale(-1, 1) translateY(-50%);
+	display: block;
+	top: 50%;
+	position: absolute;
+	left: 0;
+}
+
 .careers__inner {
 	position: relative;
 	padding-bottom: 136px;
@@ -605,15 +614,6 @@ body {
 .our_team {
 	background-color: #000000;
 	padding-bottom: 100px;
-	position: relative;
-}
-
-.our_team::before {
-	content: url('/img/2.png');
-	transform: scale(-1, 1);
-	display: block;
-	position: absolute;
-	left: 0;
 }
 
 .our_team .container {

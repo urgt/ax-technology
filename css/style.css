@@ -716,7 +716,7 @@ body {
 .project__item {
 	display: flex;
 	align-items: center;
-	height: 70vh;
+	height: 100svh;
 }
 
 .project_left {
@@ -729,7 +729,7 @@ body {
 
 .projects_right {
 	width: 50%;
-	height: 80vh;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

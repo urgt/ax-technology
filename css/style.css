@@ -143,6 +143,12 @@ a {
 }
 
 
+.cursor2,
+.cursor-dot,
+.content {
+	will-change: transform;
+}
+
 /*** cursor ***/
 
 @media (hover: none) {
@@ -537,13 +543,26 @@ body {
 	position: relative;
 }
 
-.careers::before {
-	content: url('/img/2.png');
-	transform: scale(-1, 1) translateY(-50%);
-	display: block;
-	top: 50%;
-	position: absolute;
-	left: 0;
+.for_background {
+
+	/* ff 3.6+ */
+	background: -moz-radial-gradient(circle at 0% 26%, rgba(50, 26, 19, 1) 0%, rgba(11, 11, 11, 1) 28%, rgba(8, 8, 8, 1) 100%);
+
+	/* safari 5.1+,chrome 10+ */
+	background: -webkit-radial-gradient(circle at 0% 26%, rgba(50, 26, 19, 1) 0%, rgba(11, 11, 11, 1) 28%, rgba(8, 8, 8, 1) 100%);
+
+	/* opera 11.10+ */
+	background: -o-radial-gradient(circle at 0% 26%, rgba(50, 26, 19, 1) 0%, rgba(11, 11, 11, 1) 28%, rgba(8, 8, 8, 1) 100%);
+
+	/* ie 10+ */
+	background: -ms-radial-gradient(circle at 0% 26%, rgba(50, 26, 19, 1) 0%, rgba(11, 11, 11, 1) 28%, rgba(8, 8, 8, 1) 100%);
+
+	/* global 92%+ browsers support */
+	background: radial-gradient(circle at 0% 26%, rgba(50, 26, 19, 1) 0%, rgba(11, 11, 11, 1) 28%, rgba(8, 8, 8, 1) 100%);
+
+
+	display: flex;
+	flex-direction: column;
 }
 
 .careers__inner {
@@ -677,7 +696,7 @@ body {
 }
 
 .projects {
-	background-image: url(../img/2.png), linear-gradient(to top, #080808, #000000, #080808);
+	background-image: url(../img/2.png);
 	background-position-x: right;
 	background-repeat: no-repeat;
 	padding-bottom: 200px;
@@ -691,17 +710,41 @@ body {
 
 .projects__inner {
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
 }
 
 .project__item {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	height: 70vh;
 }
 
 .project_left {
 	padding-right: 70px;
+}
+
+.projects_left {
+	width: 50%;
+}
+
+.projects_right {
+	width: 50%;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+
+
+.project_img {
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	object-fit: cover;
+	vertical-align: middle;
 }
 
 .project_name {
@@ -718,10 +761,7 @@ body {
 	margin-bottom: 24px;
 }
 
-.project_img {
-	width: 600px;
-	height: 600px;
-}
+
 
 .hiring {
 	background: #080808;
@@ -918,7 +958,7 @@ input[type=file]::file-selector-button:hover {
 
 
 
-#smooth-content > section {
+#smooth-content>section {
 	margin-top: -1px;
 	margin-bottom: -1px;
 }
@@ -929,15 +969,17 @@ input[type=file]::file-selector-button:hover {
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 	line-height: 100%;
 }
+
 .anim-title .char {
 	transform: translateY(115px);
 	transition: transform .5s;
 }
 
 /* carousel autoplay */
-.mySwiper .swiper-wrapper{
-    transition-timing-function: linear;
+.mySwiper .swiper-wrapper {
+	transition-timing-function: linear;
 }
+
 /******** about us page *******/
 
 
@@ -1152,6 +1194,14 @@ input[type=file]::file-selector-button:hover {
 		padding-bottom: 50px;
 	}
 
+	.projects__title {
+		margin: 100px 0;
+	}
+
+	.our_projects__inner {
+		display: flex;
+	}
+
 	.title {
 		font-weight: 200;
 		font-size: 36px;
@@ -1186,6 +1236,23 @@ input[type=file]::file-selector-button:hover {
 		text-align: right;
 	}
 
+
+	/* ABOUT US MOBILE */
+	.success_inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.team_top {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.team_top .title,
+	.team_top .subtitle {
+		max-width: 100%;
+
+	}
 }
 
 @media (max-width: 480px) {

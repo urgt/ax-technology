@@ -50,12 +50,41 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 // create the smooth scroller FIRST!
 
-ScrollSmoother.create({
-    wrapper: '.wrapper',
-    content: '.content',
-    smooth: 1.5,
-    effects: true
+if (ScrollTrigger.isTouch !== 1) {
+    ScrollSmoother.create({
+        wrapper: '.wrapper',
+        content: '.content',
+        smooth: 1.5,
+        effects: true
+    })
+}
+
+
+
+
+gsap.set(".project_img:not(:first-child)", { opacity: 0, y: '100%' })
+
+const animation = gsap.to(".project_img:not(:first-child)", {
+    opacity: 1, y: 0, duration: 1, stagger: 1
 })
+
+ScrollTrigger.create({
+    trigger: ".projects__inner",
+    start: "top top",
+    end: "bottom bottom",
+    pin: ".projects_right",
+    animation: animation,
+    scrub: true,
+    markers: true,
+    toggleActions: "play none reverse none",
+    invalidateOnRefresh: true,
+})
+
+
+
+
+
+
 
 const myText = new SplitType('.anim-title')
 
@@ -63,7 +92,8 @@ gsap.to('.char', {
     y: 0,
     stagger: 0.05,
     delay: 0.2,
-    duration: .1
+    duration: .1,
+    scrub: true
 })
 
 // custom cursor hovers

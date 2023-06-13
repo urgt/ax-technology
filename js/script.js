@@ -71,7 +71,8 @@ if (ScrollTrigger.isTouch !== 1) {
         wrapper: '.wrapper',
         content: '.content',
         smooth: 1.5,
-        effects: true
+        effects: true,
+        smoothTouch: 0.1,
     })
 }
 
@@ -244,7 +245,7 @@ $(() => {
     }
 })();
 
-if (($(window).width()) < 755) {
+if (($(window).width()) <= 755) {
     $('.header .nav').hide();
     $('.vacation_subtitle').hide();
 }
@@ -259,11 +260,11 @@ $('.vacation_title').on('click', function () {
 
 $(window).resize(function () {
 
-    if (($(window).width()) < 755) {
+    if (($(window).width()) <= 755) {
         $('.header .nav').hide();
         $('.vacation_subtitle').hide();
     } else {
-        $('.nav').show();
+        $('.header .nav').show();
         $('.vacation_subtitle').show();
     }
 
@@ -273,7 +274,7 @@ $(window).resize(function () {
 //  Mobile menu toggle
 
 function toggleMenu() {
-    $('.nav').slideToggle()('fast');
+    $('.header .nav').slideToggle()('fast');
 }
 
 

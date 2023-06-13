@@ -1011,6 +1011,7 @@ input[type=file]::file-selector-button:hover {
 	display: flex;
 	flex-direction: column;
 
+
 	/* ff 3.6+ */
 	background: -moz-radial-gradient(circle at 0% 8%, rgba(21, 14, 12, 1) 0%, rgba(8, 8, 8, 1) 33%, rgba(8, 8, 8, 1) 100%);
 
@@ -1027,6 +1028,15 @@ input[type=file]::file-selector-button:hover {
 	background: radial-gradient(circle at 0% 8%, rgba(21, 14, 12, 1) 0%, rgba(8, 8, 8, 1) 33%, rgba(8, 8, 8, 1) 100%);
 }
 
+.success .container {
+	overflow-x: visible;
+}
+
+.success_section {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .success__tittle {
 	max-width: 600px;
 	text-transform: uppercase;
@@ -1041,13 +1051,17 @@ input[type=file]::file-selector-button:hover {
 
 .gallery {
 	display: flex;
-	gap: 64px;
+	gap: 1.5rem;
 	align-items: center;
 	margin-bottom: 180px;
+	overflow-x: visible;
+
 }
 
+
+
 .gallery img {
-	width: 530px;
+	width: 44%;
 	height: 390px;
 	object-fit: cover;
 	object-position: center;
@@ -1058,14 +1072,20 @@ input[type=file]::file-selector-button:hover {
 }
 
 .teambuildings .gallery img {
-	width: 480px;
 	height: 302px;
 }
 
 .teambuildings .gallery img.narrow {
-	width: 282px;
 	height: 383px;
 
+}
+
+.teambuildings .gallery img {
+	width: 33%;
+}
+
+.teambuildings .gallery img.narrow {
+	width: 20%;
 }
 
 .top_team {
@@ -1133,6 +1153,11 @@ input[type=file]::file-selector-button:hover {
 	.hire_cta .title,
 	.hire_cta .descr {
 		padding: 0;
+	}
+
+	.top_team {
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 
@@ -1382,6 +1407,11 @@ input[type=file]::file-selector-button:hover {
 		flex-direction: column;
 	}
 
+	.success_section {
+		margin-bottom: 100px;
+
+	}
+
 	.team_top {
 		flex-direction: column;
 		gap: 16px;
@@ -1392,6 +1422,60 @@ input[type=file]::file-selector-button:hover {
 		max-width: 100%;
 
 	}
+
+	.top_team {
+		flex-wrap: wrap;
+		margin-bottom: 120px;
+	}
+
+	/* about us */
+	.success__descr {
+		margin: 0;
+	}
+
+
+	.gallery {
+		margin-bottom: 120px;
+	}
+
+	.gallery img {
+		width: 80%;
+		height: auto;
+	}
+
+	.top_team__right img {
+		width: 100%;
+	}
+
+	.top_team__title {
+		margin-bottom: 16px;
+	}
+
+	.top_team {
+		gap: 44px;
+	}
+
+
+	.teambuildings_top {
+		flex-direction: column;
+		margin-bottom: 120px;
+	}
+
+	.teambuildings__tittle,
+	.teambuildings__descr {
+		width: 100%;
+	}
+
+	.teambuildings .gallery img {
+		width: 80%;
+	}
+
+	.teambuildings .gallery img.narrow {
+		width: 70%;
+	}
+
+
+
 }
 
 @media (max-width: 480px) {

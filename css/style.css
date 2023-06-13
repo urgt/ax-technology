@@ -741,6 +741,7 @@ body {
 	overflow: hidden;
 	width: 600px;
 	height: 600px;
+	will-change: overflow;
 }
 
 .project_img {
@@ -749,6 +750,8 @@ body {
 	position: absolute;
 	object-fit: cover;
 	vertical-align: middle;
+	overflow: hidden;
+	will-change: transform;
 }
 
 .project_name {

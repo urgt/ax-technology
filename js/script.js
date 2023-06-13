@@ -62,10 +62,10 @@ if (ScrollTrigger.isTouch !== 1) {
 
 
 
-gsap.set(".project_img:not(:first-child)", { opacity: 0, y: '100%' })
+gsap.set(".project_img:not(:first-child)", { yPercent: 101 })
 
 const animation = gsap.to(".project_img:not(:first-child)", {
-    opacity: 1, y: 0, duration: 1, stagger: 1
+    yPercent: 0, duration: 1, stagger: 1
 })
 
 ScrollTrigger.create({

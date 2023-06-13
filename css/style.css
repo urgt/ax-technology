@@ -728,16 +728,20 @@ body {
 }
 
 .projects_right {
-	width: 50%;
 	height: 100vh;
 	display: flex;
+	width: 50%;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	position: relative;
 }
 
 
+.orijects_right_inner {
+	position: relative;
+	overflow: hidden;
+	width: 600px;
+	height: 600px;
+}
 
 .project_img {
 	width: 600px;

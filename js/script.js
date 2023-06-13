@@ -24,6 +24,22 @@ var swiper = new Swiper(".mySwiper", {
         },
         // when window width is >= 480px
         480: {
+            slidesPerView: '1',
+            spaceBetween: 32,
+        },
+        650: {
+            slidesPerView: '2',
+            spaceBetween: 32,
+        },
+        755: {
+            slidesPerView: '3',
+            spaceBetween: 32,
+        },
+        1000: {
+            slidesPerView: '4',
+            spaceBetween: 32,
+        },
+        1250: {
             slidesPerView: '6',
             spaceBetween: 32,
         },
@@ -61,24 +77,27 @@ if (ScrollTrigger.isTouch !== 1) {
 
 
 
+if (($(window).width()) > 755) {
 
-gsap.set(".project_img:not(:first-child)", { yPercent: 101 })
+    gsap.set(".project_img:not(:first-child)", { yPercent: 101 })
 
-const animation = gsap.to(".project_img:not(:first-child)", {
-    yPercent: 0, duration: 1, stagger: 1
-})
+    const animation = gsap.to(".project_img:not(:first-child)", {
+        yPercent: 0, duration: 1, stagger: 1
+    })
 
-ScrollTrigger.create({
-    trigger: ".projects__inner",
-    start: "top top",
-    end: "bottom bottom",
-    pin: ".projects_right",
-    animation: animation,
-    scrub: true,
-    markers: true,
-    toggleActions: "play none reverse none",
-    invalidateOnRefresh: true,
-})
+    ScrollTrigger.create({
+        trigger: ".projects__inner_desktop",
+        start: "top top",
+        end: "bottom bottom",
+        pin: ".projects_right",
+        animation: animation,
+        scrub: true,
+        markers: false,
+        invalidateOnRefresh: true,
+    })
+}
+
+
 
 
 
@@ -92,8 +111,7 @@ gsap.to('.char', {
     y: 0,
     stagger: 0.05,
     delay: 0.2,
-    duration: .1,
-    scrub: true
+    duration: .1
 })
 
 // custom cursor hovers

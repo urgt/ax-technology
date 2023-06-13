@@ -1103,6 +1103,39 @@ input[type=file]::file-selector-button:hover {
 	}
 }
 
+@media (max-width: 960px) {
+	.hiring {
+		padding-bottom: 120px;
+	}
+
+	.hire_top {
+		flex-direction: column;
+		gap: 18px;
+	}
+
+	.hire_img {
+		width: 100%;
+	}
+
+	.hire_right {
+		gap: 30px;
+	}
+
+	.hire_right .title {
+		padding: 0;
+	}
+
+	.hire_bottom {
+		flex-direction: column;
+		gap: 50px;
+	}
+
+	.hire_cta .title,
+	.hire_cta .descr {
+		padding: 0;
+	}
+}
+
 @media (max-width: 755px) {
 
 
@@ -1131,7 +1164,7 @@ input[type=file]::file-selector-button:hover {
 		padding: 0;
 	}
 
-	.nav {
+	.header .nav {
 		display: flex;
 		flex-direction: column;
 		position: absolute;
@@ -1149,7 +1182,7 @@ input[type=file]::file-selector-button:hover {
 		background-size: contain;
 	}
 
-	.nav__menu {
+	.header .nav__menu {
 		flex-direction: column;
 		justify-content: center;
 		flex-wrap: nowrap;
@@ -1160,6 +1193,31 @@ input[type=file]::file-selector-button:hover {
 		font-weight: 100;
 		font-size: 28px;
 		line-height: 150%;
+	}
+
+	.footer {
+		padding: 60px 0;
+
+	}
+
+	.footer .container {
+		flex-direction: column;
+		align-items: center;
+		gap: 38px;
+
+	}
+
+	.footer .nav__menu {
+		flex-direction: column;
+		gap: 12px;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 150%;
+		text-align: center;
+	}
+
+	.copiright {
+		text-align: center;
 	}
 
 	.hero {
@@ -1316,36 +1374,7 @@ input[type=file]::file-selector-button:hover {
 		text-align: right;
 	}
 
-	.hiring {
-		padding-bottom: 120px;
-	}
 
-	.hire_top {
-		flex-direction: column;
-		gap: 18px;
-	}
-
-	.hire_img {
-		width: 100%;
-	}
-
-	.hire_right {
-		gap: 30px;
-	}
-
-	.hire_right .title {
-		padding: 0;
-	}
-
-	.hire_bottom {
-		flex-direction: column;
-		gap: 50px;
-	}
-
-	.hire_cta .title,
-	.hire_cta .descr {
-		padding: 0;
-	}
 
 	/* ABOUT US MOBILE */
 	.success_inner {

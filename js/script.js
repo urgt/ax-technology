@@ -245,7 +245,7 @@ $(() => {
 })();
 
 if (($(window).width()) < 755) {
-    $('.nav').hide();
+    $('.header .nav').hide();
     $('.vacation_subtitle').hide();
 }
 
@@ -260,7 +260,7 @@ $('.vacation_title').on('click', function () {
 $(window).resize(function () {
 
     if (($(window).width()) < 755) {
-        $('.nav').hide();
+        $('.header .nav').hide();
         $('.vacation_subtitle').hide();
     } else {
         $('.nav').show();

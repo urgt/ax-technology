@@ -1160,6 +1160,35 @@ input[type=file]::file-selector-button:hover {
 	line-height: 110%;
 }
 
+/* contacts page */
+
+.contacts_page .hiring {
+	background: none;
+}
+
+.vacations_page,
+.contacts_page {
+
+	padding-top: 155px;
+
+
+	/* ff 3.6+ */
+	background: -moz-radial-gradient(circle at 100% 50%, rgba(33, 19, 14, 1) 0%, rgba(8, 8, 8, 1) 100%);
+
+	/* safari 5.1+,chrome 10+ */
+	background: -webkit-radial-gradient(circle at 100% 50%, rgba(33, 19, 14, 1) 0%, rgba(8, 8, 8, 1) 100%);
+
+	/* opera 11.10+ */
+	background: -o-radial-gradient(circle at 100% 50%, rgba(33, 19, 14, 1) 0%, rgba(8, 8, 8, 1) 100%);
+
+	/* ie 10+ */
+	background: -ms-radial-gradient(circle at 100% 50%, rgba(33, 19, 14, 1) 0%, rgba(8, 8, 8, 1) 100%);
+
+	/* global 92%+ browsers support */
+	background: radial-gradient(circle at 100% 50%, rgba(33, 19, 14, 1) 0%, rgba(8, 8, 8, 1) 100%);
+}
+
+
 
 @media (max-width: 1200px) {
 	.container {

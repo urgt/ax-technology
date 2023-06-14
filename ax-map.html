@@ -76,64 +76,145 @@
 
                 </div>
             </header>
-            <section class="our_projects_page">
-                <div class="container">
+
+            <div class="ax_map_page">
+                <section class="ax_map_intro container">
+                    <div class="intro_left">
+                        <div class="intro_left_top">
+                            <h1 class="project_item_title">AX MAP</h1>
+                            <span>BUILDING BUSINESSES + SHAPING COMMERCE</span>
+                        </div>
+                        <div class="intro_left_bottom">
+                            <div class="intro_year">
+                                <span>Год</span>
+                                <p>2021-2022</p>
+                            </div>
+                            <div class="intro_target">
+                                <span>Направленность</span>
+                                <p>Недвижимость</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro_right">
+                        <img src="/img/axmap1.jpg" alt="AX MAP">
+                        <img src="/img/axmap2.jpg" alt="AX MAP">
+                    </div>
+                </section>
+                <section class="about_axmap container">
                     <div class="title_and_descr">
-                        <div class="title">НАШИ<br>ПРОЕКТЫ</div>
-                        <div class="descr">Проекты AX Technology затрагивают разные направления современной
-                            ИТ-индустрии,
-                            среди которых есть web-разработка, 3D-моделирование, программирование, маркетинг и многое
-                            другое. Также мы продолжаем заниматься развитием своих проектов, подробнее о которых вы
-                            можете
-                            узнать ниже.
+                        <div class="title">О продукте</div>
+                        <div class="descr">Интерактивная 3D-карта жилой недвижимости Дубая, включающая в себя виллы,
+                            жилые комплексы, апартаменты и квартиры, с детальной демонстрацией их интерьеров и
+                            экстерьеров.
                         </div>
                     </div>
+                    <div class="ax_imgs">
+                        <img src="/img/AX MAP full.jpg" alt="AX MAP">
+                    </div>
+                    <div class="ax_imges">
+                        <img src="/img/axmap11.jpg" alt="ax MAP">
+                        <img src="/img/axmap3.jpg" alt="ax MAP">
+                    </div>
+                </section>
 
-                    <div class="portfolio_item">
-                        <img src="img/Rectangle 574509.jpg" alt="AX CAPITAL">
-                        <div class="title_and_descr">
-                            <div class="title">AX CAPITAL</div>
-                            <div class="descr">Корпоративный сайт в собственной уникальной стилистике с широким
-                                функционалом.
+                <section class="map_functional container">
+                    <div class="title_and_descr">
+                        <div class="title">Функционал</div>
+                        <div class="descr">Пользователь выбирает объект в любом понравившемся районе Дубая, после чего
+                            видит его полноценную 3D-модель с мебелью, будь то квартира или вилла. Подробная информация
+                            включает в себя квадратуру, цену, этаж и количество комнат, а актуальность информации и
+                            предложений поддерживается нашей командой.
+                        </div>
+                    </div>
+                    <div class="video" data-lag="0.1">
+                        <div class="video__inner container">
+                            <img src="img/video2.jpg" alt="Showreel" class="video_img">
+                            <a href="#"><img src="img/Icon-min.png" alt="play" class="play"></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="map_process container">
+                    <div class="title_and_descr">
+                        <div class="title">Процесс<br>разработки</div>
+                        <div class="descr">Целью проекта было создание функционального и современного приложения для
+                            поиска недвижимости в Дубае, с вниманием к удобству пользователя. Был разработан наиболее
+                            практичный дизайн, удобный в использовании и навигации
+                        </div>
+                    </div>
+                    <div class="map_process_imgs">
+                        <img src="/img/m1.png" alt="">
+                        <img src="/img/m2.png" alt="">
+                        <img src="/img/m3.png" alt="">
+                        <img src="/img/m4.png" alt="">
+                    </div>
+                </section>
+                <section class="hiring section">
+                    <div class="hiring_inner container">
+
+                        <div class="hire_bottom">
+                            <div class="hire_cta">
+                                <p class="title">Давайте работать вместе!</p>
+                                <p class="descr">Заполните анкету и станьте частью нашей команды! Участвуя в создании и
+                                    реализации новых потрясающих проектов. </p>
+                            </div>
+                            <div class="login-box">
+
+                                <form action="/" method="post" title="Давайте работать вместе!">
+                                    <div class="user-box">
+                                        <input type="text" name="" required>
+                                        <label>ФИО</label>
+                                    </div>
+                                    <div class="user-box">
+                                        <input type="email" name="" required>
+                                        <label>Почта</label>
+                                    </div>
+
+                                    <div class="user-box">
+                                        <input type="text" name="" required>
+                                        <label>Сопроводительное сообщение</label>
+                                    </div>
+
+                                    <div class="file-box">
+                                        <div><label>Портфолио</label></div>
+                                        <input id="ax_file_portfolio" type="file" name="ax_file_portfolio"
+                                            style="display:none">
+                                        <div class="portfolio"
+                                            onclick="document.getElementById('ax_file_portfolio').click()">
+
+                                            <div class="porfolio__icon">
+                                                <img src="/img/circum_save-down-2.svg" alt="Загрузить портфолио">
+                                                <p>Загрузить портфолио</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="file-box">
+                                        <div><label>Резюме</label></div>
+                                        <input id="ax_file_resume" type="file" name="ax_file_resume"
+                                            style="display:none">
+                                        <div class="portfolio"
+                                            onclick="document.getElementById('ax_file_resume').click()">
+
+                                            <div class="porfolio__icon">
+                                                <img src="/img/circum_save-down-2.svg" alt="Загрузить портфолио">
+                                                <p>Загрузить резюме</p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <button class="form_submit">ОТПРАВИТЬ</button>
+
+                                </form>
                             </div>
                         </div>
                     </div>
+                </section>
 
-                    <a href="/ax-map.html">
-                        <div class="portfolio_item">
-                            <img src="img/axmap.jpg" alt="AX MAP">
-                            <div class="title_and_descr">
-                                <div class="title">AX MAP</div>
-                                <div class="descr">Интерактивная 3D карта Дубая с актуальными предложениями всей
-                                    недвижимости
-                                    города для покупки или аренды.
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <div class="portfolio_item">
-                        <img src="img/axcrm.jpg" alt="AX CAPITAL">
-                        <div class="title_and_descr">
-                            <div class="title">AX CAPITAL</div>
-                            <div class="descr">Корпоративный сайт в собственной уникальной стилистике с широким
-                                функционалом.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio_item">
-                        <img src="img/axlanding.jpg" alt="AX CAPITAL">
-                        <div class="title_and_descr">
-                            <div class="title">AX CAPITAL</div>
-                            <div class="descr">Корпоративный сайт в собственной уникальной стилистике с широким
-                                функционалом.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
+            </div>
 
 
 

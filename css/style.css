@@ -140,6 +140,7 @@ a:link,
 a {
 	text-decoration: none;
 	outline: none;
+	color: inherit;
 }
 
 :root {
@@ -1139,13 +1140,13 @@ input[type=file]::file-selector-button:hover {
 
 
 
-.projects_page_top {
+.title_and_descr {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 120px;
 }
 
-.projects_page_top .descr {
+.title_and_descr .descr {
 	width: 50%;
 }
 
@@ -1188,6 +1189,93 @@ input[type=file]::file-selector-button:hover {
 	background: radial-gradient(circle at 100% 50%, rgba(33, 19, 14, 1) 0%, rgba(8, 8, 8, 1) 100%);
 }
 
+
+/* AX MAP PAGE */
+
+.ax_map_page {
+	padding-top: 150px;
+	background: radial-gradient(circle at 0% 25%, rgba(33, 19, 14, 1) 0%, rgba(8, 8, 8, 1) 39%, rgba(238, 130, 238, 0) 100%), radial-gradient(circle at 100% 70%, rgba(33, 19, 14, 1) 0%, rgba(8, 8, 8, 1) 58%, rgba(238, 130, 238, 0) 100%);
+}
+
+.ax_map_intro {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 160px;
+}
+
+.intro_left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 70px;
+}
+
+.project_item_title {
+	font-weight: 100;
+	font-size: 120px;
+	line-height: 90%;
+}
+
+.intro_left span {
+	font-weight: 200;
+	font-size: 16px;
+	line-height: 150%;
+	color: rgb(214, 214, 214);
+}
+
+.intro_left_bottom {
+	display: flex;
+}
+
+.intro_year {
+	margin-right: 100px;
+}
+
+.intro_right {
+	max-width: 600px;
+	text-align: right;
+}
+
+.about_axmap {
+	margin-bottom: 160px;
+}
+
+.ax_imgs img {
+	width: 100%;
+}
+
+.ax_imges img {
+	aspect-ratio: 1/1;
+	object-fit: cover;
+}
+
+.ax_imges {
+	margin-top: 17px;
+	display: flex;
+	gap: 25px;
+}
+
+.map_functional .video__inner {
+	top: 0;
+	margin-bottom: 160px;
+}
+
+.map_functional .title_and_descr {
+	margin-bottom: 70px;
+}
+
+.map_process_imgs {
+	display: flex;
+	gap: 24px;
+}
+
+.map_process {
+	margin-bottom: 160px;
+}
+
+.ax_map_page .hiring {
+	background: none;
+}
 
 
 @media (max-width: 1200px) {
@@ -1553,13 +1641,13 @@ input[type=file]::file-selector-button:hover {
 
 
 
-	.projects_page_top {
+	.title_and_descr {
 		flex-wrap: wrap;
 		gap: 16px;
 	}
 
-	.projects_page_top .title,
-	.projects_page_top .descr {
+	.title_and_descr .title,
+	.title_and_descr .descr {
 		width: 100%;
 	}
 
@@ -1568,7 +1656,7 @@ input[type=file]::file-selector-button:hover {
 		object-fit: cover;
 	}
 
-	.portfolio_item .projects_page_top {
+	.portfolio_item .title_and_descr {
 		margin-bottom: 70px;
 	}
 }

@@ -1148,6 +1148,7 @@ input[type=file]::file-selector-button:hover {
 
 .title_and_descr .descr {
 	width: 50%;
+	text-align: justify;
 }
 
 .portfolio_item img {
@@ -1247,12 +1248,13 @@ input[type=file]::file-selector-button:hover {
 .ax_imges img {
 	aspect-ratio: 1/1;
 	object-fit: cover;
+	width: 49%;
 }
 
 .ax_imges {
-	margin-top: 17px;
+	margin-top: 1vw;
 	display: flex;
-	gap: 25px;
+	justify-content: space-between;
 }
 
 .map_functional .video__inner {
@@ -1320,6 +1322,10 @@ input[type=file]::file-selector-button:hover {
 	.top_team {
 		flex-wrap: wrap;
 		justify-content: center;
+	}
+
+	.intro_right {
+		display: none;
 	}
 }
 
@@ -1658,6 +1664,43 @@ input[type=file]::file-selector-button:hover {
 
 	.portfolio_item .title_and_descr {
 		margin-bottom: 70px;
+	}
+
+	.project_item_title {
+		font-size: 42px;
+		line-height: 90%;
+	}
+
+	.intro_left span {
+		font-size: 14px;
+		line-height: 150%;
+	}
+
+	.intro_left_bottom {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.ax_map_intro {
+		margin-bottom: 120px;
+	}
+
+
+	.about_axmap .title_and_descr,
+	.map_process .title_and_descr {
+		margin-bottom: 50px;
+	}
+
+	.map_functional .video__inner {
+		margin-bottom: 120px;
+	}
+
+	.ax_map_page .video {
+		padding-bottom: 0;
+	}
+
+	.about_axmap {
+		margin-bottom: 120px;
 	}
 }
 

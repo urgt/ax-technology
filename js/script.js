@@ -66,15 +66,15 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 // create the smooth scroller FIRST!
 
-if (ScrollTrigger.isTouch !== 1) {
-    ScrollSmoother.create({
-        wrapper: '.wrapper',
-        content: '.content',
-        smooth: 1.5,
-        effects: true,
-        smoothTouch: 0.1,
-    })
-}
+
+ScrollSmoother.create({
+    wrapper: '.wrapper',
+    content: '.content',
+    smooth: 1.5,
+    effects: true,
+    smoothTouch: 0.1,
+})
+
 
 
 
@@ -278,3 +278,64 @@ function toggleMenu() {
 }
 
 
+
+if (($(window).width()) >= 755) {
+
+    let races = document.querySelector(".gallery");
+    if (typeof (races) != 'undefined' && races != null) {
+        function getScrollAmount() {
+            let racesWidth = races.scrollWidth;
+            return -(racesWidth - window.innerWidth);
+        }
+
+        let tween = gsap.to(races, {
+            x: getScrollAmount,
+            duration: 3,
+            ease: "none",
+        });
+
+
+        ScrollTrigger.create({
+            trigger: ".gallery",
+            start: "top 30%",
+            end: () => `+=${getScrollAmount() * -1}`,
+            pin: true,
+            animation: tween,
+            scrub: 1,
+            invalidateOnRefresh: true
+        })
+    }
+
+
+
+
+
+    let racess = document.querySelector(".gallery1");
+    if (typeof (racess) != 'undefined' && racess != null) {
+        function getScrollAmount() {
+            racesWidth = racess.scrollWidth;
+            return -(racesWidth - window.innerWidth);
+        }
+        tween = gsap.to(racess, {
+            x: getScrollAmount,
+            duration: 3,
+            ease: "none",
+        });
+
+
+        ScrollTrigger.create({
+            trigger: ".gallery1",
+            start: "top 30%",
+            end: () => `+=${getScrollAmount() * -1}`,
+            pin: true,
+            animation: tween,
+            scrub: 1,
+            invalidateOnRefresh: true
+        })
+    }
+} else {
+    let gallery = document.querySelectorAll('.gallery');
+    gallery.forEach(elem => {
+        elem.style.overflow = 'auto'
+    })
+}

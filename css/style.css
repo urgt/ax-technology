@@ -1056,6 +1056,7 @@ input[type=file]::file-selector-button:hover {
 	align-items: center;
 	margin-bottom: 180px;
 	overflow-x: visible;
+	will-change: transform;
 
 }
 

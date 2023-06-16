@@ -742,7 +742,7 @@ body {
 	position: relative;
 	overflow: hidden;
 	width: 600px;
-	height: 600px;
+	height: 40vw;
 	will-change: overflow;
 }
 
@@ -759,7 +759,7 @@ body {
 
 .projects__inner_desktop .project_img {
 	width: 600px;
-	height: 600px;
+	height: 40vw;
 	position: absolute;
 	object-fit: cover;
 	vertical-align: middle;

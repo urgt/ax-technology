@@ -741,7 +741,8 @@ body {
 .projects__inner_desktop .orijects_right_inner {
 	position: relative;
 	overflow: hidden;
-	width: 600px;
+	width: 25vw;
+	min-width: 600px;
 	height: 40vw;
 	will-change: overflow;
 }
@@ -758,7 +759,9 @@ body {
 }
 
 .projects__inner_desktop .project_img {
-	width: 600px;
+	width: 25vw;
+
+	min-width: 600px;
 	height: 40vw;
 	position: absolute;
 	object-fit: cover;
@@ -1351,6 +1354,11 @@ input[type=file]::file-selector-button:hover {
 		padding-left: 20px !important;
 		padding-right: 20px !important;
 	}
+
+	.projects__inner_desktop .orijects_right_inner,
+	.projects__inner_desktop .project_img {
+		min-width: 400px;
+	}
 }
 
 @media (max-width: 960px) {
@@ -1392,6 +1400,11 @@ input[type=file]::file-selector-button:hover {
 
 	.intro_right {
 		display: none;
+	}
+
+	.projects__inner_desktop .orijects_right_inner,
+	.projects__inner_desktop .project_img {
+		min-width: 350px;
 	}
 }
 

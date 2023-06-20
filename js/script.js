@@ -98,14 +98,6 @@ if (($(window).width()) > 755) {
     })
 }
 
-
-
-
-
-
-
-
-
 const myText = new SplitType('.anim-title')
 
 gsap.to('.char', {
@@ -277,11 +269,13 @@ function toggleMenu() {
     $('.header .nav').slideToggle()('fast');
 }
 
+let races = document.querySelector(".gallery");
 
+let racess = document.querySelector(".gallery1");
 
 if (($(window).width()) >= 755) {
 
-    let races = document.querySelector(".gallery");
+    
     if (typeof (races) != 'undefined' && races != null) {
         function getScrollAmount() {
             let racesWidth = races.scrollWidth;
@@ -307,10 +301,6 @@ if (($(window).width()) >= 755) {
     }
 
 
-
-
-
-    let racess = document.querySelector(".gallery1");
     if (typeof (racess) != 'undefined' && racess != null) {
         function getScrollAmount() {
             racesWidth = racess.scrollWidth;

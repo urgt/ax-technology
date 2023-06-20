@@ -387,11 +387,11 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 25px;
-  max-width: 1200px;
+  max-width: 1200px;445
 }
 
 .ax {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 32px;
   line-height: 120%;
 }
@@ -626,6 +626,10 @@ body {
 
 .more_arrov {
   display: none;
+}
+
+.v-more{
+  font-weight: 300;
 }
 
 .vacation_subtitle {
@@ -1453,7 +1457,41 @@ input[type="file"]::file-selector-button:hover {
 .ax-phase-image img{
 	width: 100%;
 	margin-bottom: 160px;
-  }
+}
+
+.phase-cards{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	gap: 22px;
+}
+
+.phase-cards__item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1A1919;
+	flex-grow: 1;
+
+	padding: 150px 45px;
+}
+.phase-cards__item-light{
+	background-color: #DDDDDD;
+}
+.phase-cards__item-img{
+	width: 100%;
+
+	max-width: 500px;
+	min-width: 200px;
+}
+
+.ax_phase .video__inner{
+	top: 0;
+}
+.ax-phase-stat-image img{
+  width: 100%;
+}
 
 @media (max-width: 1200px) {
   .container {
@@ -1914,6 +1952,21 @@ input[type="file"]::file-selector-button:hover {
   .ax_phase span {
 	display: flex;
   }
+
+  .phase-cards__item{
+	padding: 85px 25px;
+}
+
+.ax-phase-image img{
+  margin-bottom: 92px;
+}
+.phase-cards{
+  gap: 15px;
+}
+
+.ax_phase .about_axmap{
+  display: none;
+}
 }
 
 @media (max-width: 480px) {

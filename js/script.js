@@ -110,7 +110,7 @@ const myText = new SplitType('.anim-title')
 
 gsap.to('.char', {
     y: 0,
-    stagger: 0.05,
+    stagger: 0.02,
     delay: 0.2,
     duration: .1
 })

@@ -84,6 +84,8 @@ if (($(window).width()) > 755) {
 
     const animation = gsap.to(".project_img:not(:first-child)", {
         yPercent: 0, duration: 1, stagger: 1
+    }).gsap.to(".project_img", {
+        yPercent: 0, duration: 1, stagger: 1
     })
 
     ScrollTrigger.create({

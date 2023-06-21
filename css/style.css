@@ -242,6 +242,7 @@ body {
   font-size: 52px;
   line-height: 110%;
   text-transform: uppercase;
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 .subtitle {
@@ -1452,6 +1453,7 @@ input[type="file"]::file-selector-button:hover {
   font-weight: 100;
   font-size: 140px;
   line-height: 90%;
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 .ax_phase .intro_left {
   width: 100%;

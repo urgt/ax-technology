@@ -272,6 +272,7 @@ function toggleMenu() {
 let races = document.querySelector(".gallery");
 
 let racess = document.querySelector(".gallery1");
+console.log(racess);
 
 if (($(window).width()) >= 755) {
 
@@ -301,13 +302,13 @@ if (($(window).width()) >= 755) {
     }
 
 
-    if (typeof (racess) != 'undefined' && racess != null) {
-        function getScrollAmount() {
+    if (racess) {
+        function getScrollAmountt() {
             racesWidth = racess.scrollWidth;
             return -(racesWidth - window.innerWidth);
         }
         tween = gsap.to(racess, {
-            x: getScrollAmount,
+            x: getScrollAmountt,
             duration: 3,
             ease: "none",
         });
@@ -316,7 +317,7 @@ if (($(window).width()) >= 755) {
         ScrollTrigger.create({
             trigger: ".gallery1",
             start: "top 30%",
-            end: () => `+=${getScrollAmount() * -1}`,
+            end: () => `+=${getScrollAmountt() * -1}`,
             pin: true,
             animation: tween,
             scrub: 1,

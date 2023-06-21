@@ -387,7 +387,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 25px;
-  max-width: 1200px;445
+  max-width: 1200px;
 }
 
 .ax {
@@ -439,9 +439,9 @@ body {
   opacity: 0.8;
 }
 
-.our_projects {
+/* .our_projects {
   padding-bottom: 125px;
-}
+} */
 
 .our_projects .container {
   overflow: visible;
@@ -521,6 +521,21 @@ body {
   line-height: 17px;
   width: auto;
   color: rgba(255, 255, 255, 0.6);
+}
+
+
+.main_slider{
+  display: flex;
+  gap: 65px;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.slider-image{
+  flex: 0 0 auto;
+  width: 530px!important;
+  height: auto!important;
+  margin-bottom: 0!important;
 }
 
 .mySwiper .swiper-slide {
@@ -1493,6 +1508,10 @@ input[type="file"]::file-selector-button:hover {
   width: 100%;
 }
 
+.stat{
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .container {
     padding-left: 20px !important;
@@ -1551,6 +1570,7 @@ input[type="file"]::file-selector-button:hover {
   .projects__inner_desktop .project_img {
     min-width: 350px;
   }
+
 }
 
 @media (max-width: 755px) {
@@ -1966,6 +1986,10 @@ input[type="file"]::file-selector-button:hover {
 
 .ax_phase .about_axmap{
   display: none;
+}
+
+.stat{
+  display: block;
 }
 }
 

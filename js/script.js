@@ -184,6 +184,12 @@ $(() => {
 
         });
 
+        $('.play').on('mouseenter', function () {
+
+            $('.cursor2').addClass('active');
+
+        });
+
     });
 
     $(window).mousemove(function (e) {
@@ -207,6 +213,12 @@ $(() => {
         });
 
         $('.swiper-wrapper',).on('mouseleave', function () {
+
+            $('.cursor2').removeClass('active');
+
+        });
+
+        $('.play',).on('mouseleave', function () {
 
             $('.cursor2').removeClass('active');
 
@@ -272,7 +284,6 @@ function toggleMenu() {
 let races = document.querySelector(".gallery");
 
 let racess = document.querySelector(".gallery1");
-console.log(racess);
 
 if (($(window).width()) >= 755) {
 
@@ -330,3 +341,26 @@ if (($(window).width()) >= 755) {
         elem.style.overflow = 'auto'
     })
 }
+
+const video = document.querySelector('.video_img');
+const play = document.querySelector('.play');
+
+video.addEventListener('click', function() {
+  if (video.paused) {
+    video.play();
+    play.style.display = 'none';
+  } else {
+    video.pause();
+    play.style.display = 'block';
+  }
+});
+
+play.addEventListener('click', function() {
+    if (video.paused) {
+      video.play();
+      play.style.display = 'none';
+    } else {
+      video.pause();
+      play.style.display = 'block';
+    }
+  });

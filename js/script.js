@@ -364,3 +364,21 @@ play.addEventListener('click', function() {
       play.style.display = 'block';
     }
   });
+
+
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".video__inner",
+      start: "top center", // Начало анимации, когда верх блока достигает верха окна
+      end: "bottom bottom", // Конец анимации, когда верх блока достигает верха окна
+      scrub: true, // Анимация будет следовать скроллу
+      markers: true // Отображение маркеров ScrollTrigger для отладки
+    }
+  });
+  
+  // Добавление шага анимации
+  tl.fromTo(".video__inner", { width: "1200px" },
+  {
+    width: "100%",
+    duration: 0.5
+  });

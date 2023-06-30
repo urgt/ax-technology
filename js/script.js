@@ -309,7 +309,7 @@ var tl = gsap.timeline({
     start: "top center", // Начало анимации, когда верх блока достигает верха окна
     end: "bottom bottom", // Конец анимации, когда верх блока достигает верха окна
     scrub: true, // Анимация будет следовать скроллу
-    markers: true, // Отображение маркеров ScrollTrigger для отладки
+    markers: false, // Отображение маркеров ScrollTrigger для отладки
   },
 });
 

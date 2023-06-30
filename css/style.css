@@ -152,7 +152,6 @@ a {
   will-change: transform;
 }
 
-
 /*** cursor ***/
 
 @media (hover: none) {
@@ -243,7 +242,7 @@ body {
   font-size: 52px;
   line-height: 110%;
   text-transform: uppercase;
-  font-feature-settings: 'pnum' on, 'lnum' on;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 
 .subtitle {
@@ -424,9 +423,9 @@ body {
   margin: 0 auto;
   overflow: hidden;
   text-align: center;
-  height: 100vh;
 }
-.video_wrap{
+
+.video_wrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,7 +436,8 @@ body {
   box-shadow: 0px 50px 80px rgba(0, 0, 0, 0.8);
 }
 
-.play, .video_img{
+.play,
+.video_img {
   cursor: pointer;
 }
 
@@ -469,7 +469,7 @@ body {
   margin-bottom: 48px;
 }
 
-.main_page .careers{
+.main_page .careers {
   margin-top: -90px;
 }
 
@@ -545,19 +545,18 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-
-.main_slider{
+.main_slider {
   display: flex;
   gap: 65px;
   flex-flow: row nowrap;
   align-items: center;
 }
 
-.slider-image{
+.slider-image {
   flex: 0 0 auto;
-  width: 530px!important;
-  height: auto!important;
-  margin-bottom: 0!important;
+  width: 530px !important;
+  height: auto !important;
+  margin-bottom: 0 !important;
 }
 
 .mySwiper .swiper-slide {
@@ -665,7 +664,7 @@ body {
   display: none;
 }
 
-.v-more{
+.v-more {
   font-weight: 300;
 }
 
@@ -1470,7 +1469,7 @@ input[type="file"]::file-selector-button:hover {
   font-weight: 100;
   font-size: 140px;
   line-height: 90%;
-  font-feature-settings: 'pnum' on, 'lnum' on;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
 .ax_phase .intro_left {
   width: 100%;
@@ -1484,50 +1483,51 @@ input[type="file"]::file-selector-button:hover {
   display: none;
 }
 
-.ax_phase .about_ax_capital, .ax_phase .title_and_descr{
-	margin-bottom: 92px;
+.ax_phase .about_ax_capital,
+.ax_phase .title_and_descr {
+  margin-bottom: 92px;
 }
 
-.ax-phase-image img{
-	width: 100%;
-	margin-bottom: 160px;
+.ax-phase-image img {
+  width: 100%;
+  margin-bottom: 160px;
 }
 
-.phase-cards{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+.phase-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-	gap: 22px;
+  gap: 22px;
 }
 
-.phase-cards__item{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #1A1919;
-	flex-grow: 1;
+.phase-cards__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1919;
+  flex-grow: 1;
 
-	padding: 150px 45px;
+  padding: 150px 45px;
 }
-.phase-cards__item-light{
-	background-color: #DDDDDD;
+.phase-cards__item-light {
+  background-color: #dddddd;
 }
-.phase-cards__item-img{
-	width: 100%;
+.phase-cards__item-img {
+  width: 100%;
 
-	max-width: 500px;
-	min-width: 200px;
+  max-width: 500px;
+  min-width: 200px;
 }
 
-.ax_phase .video__inner{
-	top: 0;
+.ax_phase .video__inner {
+  top: 0;
 }
-.ax-phase-stat-image img{
+.ax-phase-stat-image img {
   width: 100%;
 }
 
-.stat{
+.stat {
   display: none;
 }
 
@@ -1541,10 +1541,16 @@ input[type="file"]::file-selector-button:hover {
   .projects__inner_desktop .project_img {
     min-width: 400px;
   }
-  
+  .video__inner {
+    width: 1000px;
+  }
 }
 
 @media (max-width: 960px) {
+  .video__inner {
+    width: 100%;
+    height: auto;
+  }
   .hiring {
     padding-bottom: 120px;
   }
@@ -1589,7 +1595,6 @@ input[type="file"]::file-selector-button:hover {
   .projects__inner_desktop .project_img {
     min-width: 350px;
   }
-
 }
 
 @media (max-width: 755px) {
@@ -1705,10 +1710,6 @@ input[type="file"]::file-selector-button:hover {
 
   .video__inner {
     top: 0;
-  }
-
-  .video_img {
-    height: 473px;
   }
 
   .play {
@@ -1978,38 +1979,37 @@ input[type="file"]::file-selector-button:hover {
     width: 100%;
   }
 
-
   .ax_phase .project_item_title {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   .ax_phase .project_item_title {
-	text-align: left;
+    text-align: left;
   }
-  
+
   .ax_phase .intro_left_bottom,
   .ax_phase span {
-	display: flex;
+    display: flex;
   }
 
-  .phase-cards__item{
-	padding: 85px 25px;
-}
+  .phase-cards__item {
+    padding: 85px 25px;
+  }
 
-.ax-phase-image img{
-  margin-bottom: 92px;
-}
-.phase-cards{
-  gap: 15px;
-}
+  .ax-phase-image img {
+    margin-bottom: 92px;
+  }
+  .phase-cards {
+    gap: 15px;
+  }
 
-.ax_phase .about_axmap{
-  display: none;
-}
+  .ax_phase .about_axmap {
+    display: none;
+  }
 
-.stat{
-  display: block;
-}
+  .stat {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {

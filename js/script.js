@@ -309,29 +309,25 @@ var tl = gsap.timeline({
     start: "top center", // Начало анимации, когда верх блока достигает верха окна
     end: "bottom bottom", // Конец анимации, когда верх блока достигает верха окна
     scrub: true, // Анимация будет следовать скроллу
-    markers: false, // Отображение маркеров ScrollTrigger для отладки
+    markers: true, // Отображение маркеров ScrollTrigger для отладки
   },
 });
 
-switch (true) {
-  case $(window).width() < 1300:
-    // Добавление шага анимации
-    tl.fromTo(
-      ".video__inner",
-      { width: "1000px" },
-      {
-        width: "100%",
-        duration: 0.5,
-      }
-    );
-  case $(window).width() > 1300:
-    // Добавление шага анимации
-    tl.fromTo(
-      ".video__inner",
-      { width: "1200px" },
-      {
-        width: "100%",
-        duration: 0.5,
-      }
-    );
+if ($(window).width() > 999 && $(window).width() < 1300) {
+  console.log(1);
+  tl.set(".video__inner", { width: "1000px" });
+  // Добавление шага анимации
+  tl.to(".video__inner", { width: "100%", duration: 0.5 });
+}
+
+if ($(window).width() > 1300) {
+  // Добавление шага анимации
+  tl.fromTo(
+    ".video__inner",
+    { width: "1200px" },
+    {
+      width: "100%",
+      duration: 0.5,
+    }
+  );
 }

@@ -211,12 +211,12 @@ a {
 }
 
 body {
-  font-family: "Montserrat";
+  color: #FFF;
+  font-size: 18px;
+  font-family: Raleway;
   font-style: normal;
-  font-weight: 200;
-  font-size: 16px;
+  font-weight: 300;
   line-height: 150%;
-  color: #ffffff;
 }
 
 .wrapper {
@@ -236,10 +236,12 @@ body {
 }
 
 .title {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 100;
+  color: #FFF;
+  text-align: center;
   font-size: 52px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 300;
   line-height: 110%;
   text-transform: uppercase;
   font-feature-settings: "pnum" on, "lnum" on;
@@ -471,9 +473,12 @@ body {
 }
 
 .utp {
+  color: #FFF;
   text-align: center;
-  font-weight: 100;
-  font-size: 64px;
+  font-size: 52px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 300;
   line-height: 110%;
   text-transform: uppercase;
 }

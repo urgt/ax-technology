@@ -332,6 +332,11 @@ body {
   animation-delay: 2s;
 }
 
+.lline:nth-child(4)::after {
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+}
+
 @-webkit-keyframes move {
   0% {
     left: -20%;

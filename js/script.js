@@ -71,26 +71,26 @@ ScrollSmoother.create({
   smoothTouch: 0.1,
 });
 
-if ($(window).width() > 755) {
-  gsap.set(".project_img:not(:first-child)", { yPercent: 101 });
+// if ($(window).width() > 755) {
+//   gsap.set(".project_img:not(:first-child)", { yPercent: 101 });
 
-  const animation = gsap.to(".project_img:not(:first-child)", {
-    yPercent: 0,
-    duration: 1,
-    stagger: 1,
-  });
+//   const animation = gsap.to(".project_img:not(:first-child)", {
+//     yPercent: 0,
+//     duration: 1,
+//     stagger: 1,
+//   });
 
-  ScrollTrigger.create({
-    trigger: ".projects__inner_desktop",
-    start: "top top",
-    end: "bottom bottom",
-    pin: ".projects_right",
-    animation: animation,
-    scrub: true,
-    markers: false,
-    invalidateOnRefresh: true,
-  });
-}
+//   ScrollTrigger.create({
+//     trigger: ".projects__inner_desktop",
+//     start: "top top",
+//     end: "bottom bottom",
+//     pin: ".projects_right",
+//     animation: animation,
+//     scrub: true,
+//     markers: false,
+//     invalidateOnRefresh: true,
+//   });
+// }
 
 const myText = new SplitType(".anim-title");
 
@@ -313,9 +313,11 @@ var tl = gsap.timeline({
   },
 });
 
+
+
 if ($(window).width() > 999 && $(window).width() < 1300) {
-  console.log(1);
-  tl.set(".video__inner", { width: "1000px" });
+
+  document.querySelector(".video__inner").style.width = "1000px";
   // Добавление шага анимации
   tl.to(".video__inner", { width: "100%", duration: 0.5 });
 }
@@ -331,3 +333,4 @@ if ($(window).width() > 1300) {
     }
   );
 }
+

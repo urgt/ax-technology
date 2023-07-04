@@ -280,15 +280,18 @@ body {
   display: flex;
   justify-content: center;
   order: -5;
+  overflow: hidden;
+  position: relative;
 }
 
 
 .lines {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vh;
   height: 1200px;
   position: absolute;
+  top: -150px;
   justify-content: space-around;
   transform: rotate(90deg);
 }
@@ -309,8 +312,8 @@ body {
   width: 20%;
   height: 100%;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #009fb7 80%, #009fb7 100%);
-  -webkit-animation: move 6s infinite;
-  animation: move 6s infinite;
+  -webkit-animation: move 5s infinite;
+  animation: move 5s infinite;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);

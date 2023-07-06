@@ -334,3 +334,6 @@ if ($(window).width() > 1300) {
   );
 }
 
+if ($(window).width() < 1000) {
+  $('.project_bg').attr('data-speed', '1')
+}

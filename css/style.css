@@ -281,21 +281,17 @@ body {
 }
 
 .button {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 14px;
+  background:  lightgray 0% 0% / 100px 100px repeat, linear-gradient(225deg, #232323 0%, #0E0E0E 100%);
+  background-blend-mode: overlay, normal;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 16px;
   line-height: 16px;
-  /* identical to box height, or 114% */
-
-  text-transform: uppercase;
-
-  /* primary */
-
-  color: #de9488;
-
-  margin: 48px auto 0;
-  padding: 18px 85px;
-  border: 1px solid;
+  padding: 24px;
+  border: 1px solid #de9488;
 }
 
 .hero {
@@ -641,12 +637,6 @@ body {
 }
 
 
-
-
-.main_page .careers {
-  margin-top: -90px;
-}
-
 /*                   Slider                   */
 
 .swiper {
@@ -737,63 +727,34 @@ body {
   cursor: "";
 }
 
+
+
 .careers {
+  padding: var(--section-margin) 0;
+  background: var(--bg-type-1-2);
+  background-blend-mode: var(--bg-blend-1);
   position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.for_background {
-  /* ff 3.6+ */
-  background: -moz-radial-gradient(circle at 0% 26%,
-      rgba(50, 26, 19, 1) 0%,
-      rgba(11, 11, 11, 1) 28%,
-      rgba(8, 8, 8, 1) 100%);
-
-  /* safari 5.1+,chrome 10+ */
-  background: -webkit-radial-gradient(circle at 0% 26%,
-      rgba(50, 26, 19, 1) 0%,
-      rgba(11, 11, 11, 1) 28%,
-      rgba(8, 8, 8, 1) 100%);
-
-  /* opera 11.10+ */
-  background: -o-radial-gradient(circle at 0% 26%,
-      rgba(50, 26, 19, 1) 0%,
-      rgba(11, 11, 11, 1) 28%,
-      rgba(8, 8, 8, 1) 100%);
-
-  /* ie 10+ */
-  background: -ms-radial-gradient(circle at 0% 26%,
-      rgba(50, 26, 19, 1) 0%,
-      rgba(11, 11, 11, 1) 28%,
-      rgba(8, 8, 8, 1) 100%);
-
-  /* global 92%+ browsers support */
-  background: radial-gradient(circle at 0% 26%,
-      rgba(50, 26, 19, 1) 0%,
-      rgba(11, 11, 11, 1) 28%,
-      rgba(8, 8, 8, 1) 100%);
-
+.careers__inner{
   display: flex;
   flex-direction: column;
+  gap: 49px;
+  z-index: 2;
 }
 
-.careers__inner {
-  position: relative;
-  padding-bottom: 128px;
+.careers__title{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.careers .gradient {
-  position: absolute;
-  left: 0;
-  top: -100%;
-  height: 300%;
-}
-
-.careers .title {
-  margin-bottom: 24px;
-}
-
+.careers .title,
 .careers .subtitle {
-  margin-bottom: 66px;
+  text-align: center;
 }
 
 .ax-line {
@@ -803,11 +764,25 @@ body {
   margin-bottom: 36px;
 }
 
+.vacations_wrap{
+  display: flex;
+  gap: 40px 49px;
+  background:  lightgray 0% 0% / 100px 100px repeat, linear-gradient(225deg, #232323 0%, #0E0E0E 100%);
+  background-blend-mode: overlay, normal;
+  backdrop-filter: blur(15px);
+  flex-wrap: wrap;
+}
 .vacation_content {
   display: flex;
   padding-bottom: 30px;
   justify-content: space-between;
   align-items: center;
+}
+
+.vacation{
+  border: 1px solid rgba(255, 255, 255, 0.20);
+ padding: 32px;
+ flex: 1;
 }
 
 .vacation_left {
@@ -847,33 +822,50 @@ body {
 }
 
 .our_team {
-  padding-bottom: 144px;
+  padding: var(--section-margin) 0;
+  background: var(--bg-type-2);
+  background-blend-mode: var(--bg-blend-1);
 }
 
-.our_team .container {
-  overflow: visible;
+.our_team_inner{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .team_top {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 89px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 0 20px;
 }
 
 .team_top .subtitle {
-  max-width: 50%;
-}
-
-.team_top .title {
-  max-width: 30%;
+  max-width: 64%;
 }
 
 .team_member {
-  padding-left: 12px;
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
+  align-items: center;
+
+}
+
+
+.member_img{
+  width: 100px!important;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: all 0.3s ease-out;
+}
+
+.team_member:hover .member_img{
+  filter: none;
+  border-radius: 0;
 }
 
 .position {
@@ -881,32 +873,18 @@ body {
   font-size: 14px;
   line-height: 110%;
   /* or 15px */
-
+  color: #D9D9D9;
   display: flex;
   align-items: center;
   text-transform: uppercase;
 }
 
 .member_name {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 24px;
   line-height: 110%;
-  /* or 26px */
-
   display: flex;
   align-items: center;
-  text-transform: uppercase;
-}
-
-.team_member::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(180deg, #be6552 0%, #eca9a0 51.04%, #be6552 100%);
 }
 
 .projects {
@@ -1008,14 +986,16 @@ body {
 
 
 .hiring {
-  background: #080808;
-  padding-bottom: 128px;
+  background: var(--bg-type-2);
+  background-blend-mode: var(--bg-blend-1);
+  padding: var(--section-margin) 0;
+  position: relative;
 }
 
 .hire_top {
   display: flex;
-  gap: 103px;
-  margin-bottom: 128px;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .hire_right {

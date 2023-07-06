@@ -1,50 +1,49 @@
 //slider our projects
 
-var swiper = new Swiper(".mySwiper", {
-  draggable: true,
-  grabCursor: true,
-  allowTouchMove: false,
-  loop: true,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
-  speed: 5000,
-  // mousewheel: {
-  //     sensitivity: 1,
-  //     releaseOnEdges: true,
-  // },
+// var swiper = new Swiper(".mySwiper", {
+//   draggable: true,
+//   grabCursor: true,
+//   allowTouchMove: false,
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//   },
+//   speed: 5000,
+//   // mousewheel: {
+//   //     sensitivity: 1,
+//   //     releaseOnEdges: true,
+//   // },
 
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 16,
-      centeredSlides: true,
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: "1",
-      spaceBetween: 32,
-    },
-    650: {
-      slidesPerView: "2",
-      spaceBetween: 32,
-    },
-    755: {
-      slidesPerView: "3",
-      spaceBetween: 32,
-    },
-    1000: {
-      slidesPerView: "4",
-      spaceBetween: 32,
-    },
-    1250: {
-      slidesPerView: "6",
-      spaceBetween: 32,
-    },
-  },
-});
+//   breakpoints: {
+//     // when window width is >= 320px
+//     320: {
+//       slidesPerView: 1,
+//       spaceBetween: 16,
+//       centeredSlides: true,
+//     },
+//     // when window width is >= 480px
+//     480: {
+//       slidesPerView: "1",
+//       spaceBetween: 32,
+//     },
+//     650: {
+//       slidesPerView: "2",
+//       spaceBetween: 32,
+//     },
+//     755: {
+//       slidesPerView: "3",
+//       spaceBetween: 32,
+//     },
+//     1000: {
+//       slidesPerView: "4",
+//       spaceBetween: 32,
+//     },
+//     1250: {
+//       slidesPerView: "6",
+//       spaceBetween: 32,
+//     },
+//   },
+// });
 
 //slider our team
 
@@ -52,16 +51,33 @@ var swiper = new Swiper(".mySwiper2", {
   draggable: true,
   grabCursor: true,
   slidesPerView: "auto",
-  spaceBetween: 12,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  speed: 3000,
+  spaceBetween: 24,  
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      spaceBetween: 16,
+      centeredSlides: true,
+      centeredSlidesBounds: true
+    },
+    // when window width is >= 480px
+    480: {
+      centeredSlides: true,
+      centeredSlidesBounds: true
+    },
+    650: {
+      centeredSlides: false,
+    }
   },
 });
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// create the smooth scroller FIRST!
+
 
 ScrollSmoother.create({
   wrapper: ".wrapper",
@@ -70,27 +86,6 @@ ScrollSmoother.create({
   effects: true,
   smoothTouch: 0.1,
 });
-
-// if ($(window).width() > 755) {
-//   gsap.set(".project_img:not(:first-child)", { yPercent: 101 });
-
-//   const animation = gsap.to(".project_img:not(:first-child)", {
-//     yPercent: 0,
-//     duration: 1,
-//     stagger: 1,
-//   });
-
-//   ScrollTrigger.create({
-//     trigger: ".projects__inner_desktop",
-//     start: "top top",
-//     end: "bottom bottom",
-//     pin: ".projects_right",
-//     animation: animation,
-//     scrub: true,
-//     markers: false,
-//     invalidateOnRefresh: true,
-//   });
-// }
 
 const myText = new SplitType(".anim-title");
 

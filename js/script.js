@@ -55,6 +55,7 @@ var swiper = new Swiper(".mySwiper2", {
     delay: 0,
     disableOnInteraction: false,
   },
+  loop: true,
   speed: 3000,
   spaceBetween: 24,
   breakpoints: {

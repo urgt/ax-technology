@@ -655,6 +655,10 @@ body {
 	height: 367px !important; */
 }
 
+.mySwiper2 .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
 .mySwiper2 .swiper-slide {
   font-weight: 200;
   font-size: 16px;
@@ -1675,13 +1679,15 @@ input[type="file"]::file-selector-button:hover {
   }
 
   .project__item {
-    height: 368px;
+    height: 440px;
   }
 
   .vacations_wrap a {
     width: 48%;
   }
 }
+
+
 
 @media (max-width: 1040px) {
   .vacations_wrap a {

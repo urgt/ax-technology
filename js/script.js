@@ -56,7 +56,7 @@ var swiper = new Swiper(".mySwiper2", {
     disableOnInteraction: false,
   },
   speed: 3000,
-  spaceBetween: 24,  
+  spaceBetween: 24,
   breakpoints: {
     // when window width is >= 320px
     320: {
@@ -191,32 +191,32 @@ $(() => {
 
 if ($(window).width() <= 755) {
   $(".header .nav").hide();
-  $(".vacation_subtitle").hide();
+  // $(".vacation_subtitle").hide();
 }
 
-$(".vacation_title").on("click", function () {
-  if ($(window).width() < 755) {
-    $(".vacation_subtitle")
-      .not($(this).siblings(".vacation_subtitle"))
-      .hide("slide");
-    $(this).parent().find(".vacation_subtitle").slideToggle("fast");
-  }
-});
+// $(".vacation_title").on("click", function () {
+//   if ($(window).width() < 755) {
+//     $(".vacation_subtitle")
+//       .not($(this).siblings(".vacation_subtitle"))
+//       .hide("slide");
+//     $(this).parent().find(".vacation_subtitle").slideToggle("fast");
+//   }
+// });
 
 $(window).resize(function () {
   if ($(window).width() <= 755) {
     $(".header .nav").hide();
-    $(".vacation_subtitle").hide();
+    // $(".vacation_subtitle").hide();
   } else {
     $(".header .nav").show();
-    $(".vacation_subtitle").show();
+    // $(".vacation_subtitle").show();
   }
 });
 
 //  Mobile menu toggle
 
 function toggleMenu() {
-  $(".header .nav").slideToggle()("fast");
+  $(".header .nav").slideToggle("fast");
 }
 
 let races = document.querySelector(".gallery");

@@ -281,7 +281,7 @@ body {
 }
 
 .button {
-  background:  lightgray 0% 0% / 100px 100px repeat, linear-gradient(225deg, #232323 0%, #0E0E0E 100%);
+  background: lightgray 0% 0% / 100px 100px repeat, linear-gradient(225deg, #232323 0%, #0E0E0E 100%);
   background-blend-mode: overlay, normal;
   backdrop-filter: blur(15px);
   display: flex;
@@ -314,7 +314,7 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 1000vh;
+  width: 450vh;
   height: 1200px;
   justify-content: space-around;
   transform: rotate(90deg);
@@ -336,8 +336,8 @@ body {
   width: 20%;
   height: 100%;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #009fb7 80%, #009fb7 100%);
-  -webkit-animation: move 5s infinite;
-  animation: move 5s infinite;
+  -webkit-animation: move 9s infinite;
+  animation: move 9s infinite;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
@@ -739,14 +739,14 @@ body {
   overflow: hidden;
 }
 
-.careers__inner{
+.careers__inner {
   display: flex;
   flex-direction: column;
   gap: 49px;
   z-index: 2;
 }
 
-.careers__title{
+.careers__title {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -764,38 +764,66 @@ body {
   margin-bottom: 36px;
 }
 
-.vacations_wrap{
+.vacations_wrap {
   display: flex;
-  gap: 40px 49px;
-  background:  lightgray 0% 0% / 100px 100px repeat, linear-gradient(225deg, #232323 0%, #0E0E0E 100%);
+  gap: 49px 40px;
+  background: lightgray 0% 0% / 100px 100px repeat, linear-gradient(225deg, #232323 0%, #0E0E0E 100%);
   background-blend-mode: overlay, normal;
   backdrop-filter: blur(15px);
   flex-wrap: wrap;
 }
-.vacation_content {
+
+.vacations_wrap a {
   display: flex;
-  padding-bottom: 30px;
-  justify-content: space-between;
-  align-items: center;
+  max-width: 580px;
 }
 
-.vacation{
+.vacation_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.vacation {
   border: 1px solid rgba(255, 255, 255, 0.20);
- padding: 32px;
- flex: 1;
+
+  padding: 32px;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  gap: 49px;
+  will-change: transform;
+  transition: .5s cubic-bezier(.05, .5, 0, 1);
+}
+
+.vacation:hover {
+  cursor: pointer;
+  transform: scale(1.01) translateX(10px) translateY(-10px);
+}
+
+.vacation .arrow1 {
+  line-height: 130%;
+  align-self: baseline;
+}
+
+.arrow2 {
+  display: none;
 }
 
 .vacation_left {
-  width: 50%;
   text-align: left;
 }
 
 .vacation_title {
-  font-weight: 200;
+  width: 100%;
   font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
   line-height: 130%;
-  margin-bottom: 16px;
-
   text-transform: uppercase;
 }
 
@@ -813,13 +841,6 @@ body {
   line-height: 150%;
 }
 
-.vacation_right {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 10px;
-  margin-right: 20px;
-}
 
 .our_team {
   padding: var(--section-margin) 0;
@@ -827,7 +848,7 @@ body {
   background-blend-mode: var(--bg-blend-1);
 }
 
-.our_team_inner{
+.our_team_inner {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -856,14 +877,14 @@ body {
 }
 
 
-.member_img{
-  width: 100px!important;
+.member_img {
+  width: 100px !important;
   border-radius: 50%;
   filter: grayscale(100%);
   transition: all 0.3s ease-out;
 }
 
-.team_member:hover .member_img{
+.team_member:hover .member_img {
   filter: none;
   border-radius: 0;
 }
@@ -934,6 +955,7 @@ body {
 .project_top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .project_left {
@@ -1281,26 +1303,6 @@ input[type="file"]::file-selector-button:hover {
 
 .teambuildings .gallery img.narrow {
   height: 383px;
-}
-
-.arrow-wrap {
-  width: 110px;
-  height: 28px;
-  background: url("/img/arrow.svg") center right;
-  transition: 0.6s;
-  animation-timing-function: ease-out;
-}
-
-.vacation_link:hover .arrow-wrap {
-  background: url("/img/arrow.svg") center left;
-}
-
-.vacation_link:hover span.luxury {
-  text-transform: uppercase;
-  background: #fff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .teambuildings .gallery img {
@@ -1675,6 +1677,18 @@ input[type="file"]::file-selector-button:hover {
   .project__item {
     height: 368px;
   }
+
+  .vacations_wrap a {
+    width: 48%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .vacations_wrap a {
+    max-width: 100%;
+    width: 100%;
+    flex: 1;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1915,28 +1929,22 @@ input[type="file"]::file-selector-button:hover {
     margin-bottom: 8px;
   }
 
-  .vacation_link {
+  .arrow1 {
     display: none;
   }
 
-  .vacation_left {
-    width: 100%;
+  .arrow2 {
+    display: block;
+  }
+
+  .vacations_wrap a {
+    flex: auto;
   }
 
   .vacation_title {
+    font-size: 24px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-  }
-
-  .vacation_title p {
-    width: 80%;
-  }
-
-  .more_arrov {
-    display: block;
-    width: 20%;
-    text-align: right;
   }
 
   /* ABOUT US MOBILE */
@@ -2169,7 +2177,9 @@ input[type="file"]::file-selector-button:hover {
   }
 
   .project_name {
+    width: 89%;
     font-size: 32px;
+    margin: 0;
   }
 
   .project_left {
@@ -2203,7 +2213,6 @@ input[type="file"]::file-selector-button:hover {
   }
 
   .lines {
-    width: 725px;
     justify-content: space-evenly;
 
   }

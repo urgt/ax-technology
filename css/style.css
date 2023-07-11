@@ -331,65 +331,6 @@ body {
   position: relative;
 }
 
-/* 
-.lline::after {
-  position: absolute;
-  top: 50%;
-  left: -20%;
-  transform: translatey(-50);
-  content: "";
-  width: 20%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #009fb7 80%, #009fb7 100%);
-  -webkit-animation: move 9s infinite;
-  animation: move 9s infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
-  animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
-}
-
-.lline:nth-child(1)::after {
-  -webkit-animation-delay: 1.4s;
-  animation-delay: 1.4s;
-}
-
-.lline:nth-child(2)::after {
-  -webkit-animation-delay: 0;
-  animation-delay: 0;
-}
-
-.lline:nth-child(3)::after {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-
-.lline:nth-child(4)::after {
-  -webkit-animation-delay: 2.4s;
-  animation-delay: 2.4s;
-}
-
-@-webkit-keyframes move {
-  0% {
-    left: -20%;
-  }
-
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes move {
-  0% {
-    left: -20%;
-  }
-
-  100% {
-    left: 100%;
-  }
-} */
-
-
 .header {
   position: absolute;
   left: 0;
@@ -1444,14 +1385,17 @@ input[type="file"]::file-selector-button:hover {
       rgba(238, 130, 238, 0) 100%);
 }
 
+
+.ax_capital_functional .title_and_descr_col {
+  padding: var(--section-margin) 0;
+}
+
 .ax_map_intro {
   display: flex;
-  justify-content: space-between;
   padding: calc(var(--section-margin)) 0;
   margin-bottom: var(--section-margin);
   z-index: 10;
 }
-
 
 
 .intro_left {
@@ -1566,6 +1510,7 @@ input[type="file"]::file-selector-button:hover {
   overflow: hidden;
 }
 
+
 .ax_capital_full_link {
   padding-bottom: 5px;
   border-bottom: 0.5px #ccc solid;
@@ -1578,8 +1523,13 @@ input[type="file"]::file-selector-button:hover {
 
 .ax_capital_page .video {
   background: none;
+  padding: 0;
 }
 
+
+.about_ax_capital {
+  padding: var(--section-margin) 0;
+}
 
 .about_ax_capital .title_and_descr {
   margin-bottom: 110px;
@@ -1589,12 +1539,17 @@ input[type="file"]::file-selector-button:hover {
   margin: auto;
 }
 
+.ax_crm_page .ax_map_intro {
+  margin: 0;
+  padding: 0;
+}
+
 .mobile img {
   width: 100%;
 }
 
 .unique_ax_capital .title_and_descr {
-  margin-bottom: 70px;
+  margin-bottom: var(--section-margin);
 }
 
 
@@ -1871,6 +1826,7 @@ input[type="file"]::file-selector-button:hover {
 
   .menu_toggle {
     display: block;
+    z-index: 6;
   }
 
   .header {
@@ -1887,17 +1843,21 @@ input[type="file"]::file-selector-button:hover {
     padding: 0;
   }
 
+  .header .logo {
+    z-index: 6;
+  }
+
   .header .nav {
     display: flex;
     flex-direction: column;
     position: absolute;
     width: 100%;
-    height: calc(100svh - 70px);
+    height: 100svh;
     left: 0;
     right: 0;
-    top: 70px;
+    top: 0;
     bottom: 0;
-    z-index: 1000;
+    z-index: 5;
 
     background: var(--bg-type-1-2);
     background-blend-mode: var(--bg-blend-1);
@@ -1961,6 +1921,7 @@ input[type="file"]::file-selector-button:hover {
     line-height: 150%;
     width: auto;
   }
+
   .hire_cta .title {
     font-size: 32px;
   }
@@ -2054,9 +2015,10 @@ input[type="file"]::file-selector-button:hover {
 
   /* about us */
 
-  .success_inner{
+  .success_inner {
     padding-top: 130px;
   }
+
   .success__descr {
     margin: 0;
   }
@@ -2212,6 +2174,10 @@ input[type="file"]::file-selector-button:hover {
 
   .stat {
     display: block;
+  }
+
+  .ax_capital_page .video__inner {
+    margin-bottom: 0;
   }
 }
 

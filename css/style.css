@@ -2236,7 +2236,7 @@ input[type="file"]::file-selector-button:hover {
 
   .project_bg {
     height: auto;
-    object-position: 0 -150px;
+    object-position: 0 -85px;
   }
 
   .project_top {

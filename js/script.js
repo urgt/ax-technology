@@ -295,8 +295,8 @@ if ($(window).width() < 601) {
     },
   });
 
-  tl1.fromTo(".project_bg", { top: "0" },
-    { top: '-40px', duration: 0.4 });
+  tl1.fromTo(".project_bg", { top: "0px" },
+    { top: '-80px', duration: 0.4 });
 }
 
 

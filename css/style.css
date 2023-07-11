@@ -503,6 +503,8 @@ body {
   gap: 25px;
   max-width: 1200px;
   z-index: 2;
+  margin: 80px auto;
+  padding: 0 20px;
 }
 
 .ax {
@@ -1963,7 +1965,9 @@ input[type="file"]::file-selector-button:hover {
     line-height: 150%;
     width: auto;
   }
-
+  .hire_cta .title {
+    font-size: 32px;
+  }
 
   .video__inner {
     top: 0;

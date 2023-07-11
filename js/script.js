@@ -309,13 +309,13 @@ if ($(window).width() < 601) {
         start: 'top center', // Начало анимации при достижении верхней границы блока
         end: 'bottom center', // Конец анимации при достижении нижней границы блока
         scrub: 1, // Прокручиваем анимацию пропорционально скроллу
-        markers: true
+        markers: false
       },
     });
 
     // Устанавливаем анимацию для контента блока
-    tl.fromTo(content, { top: "0px" },
-      { top: '-80px', duration: 0.4 });
+    tl.fromTo(content, { top: "-123px" },
+      { top: '0px', duration: 0.4 });
   });
 }
 

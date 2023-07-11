@@ -315,7 +315,7 @@ if ($(window).width() < 601) {
 
     // Устанавливаем анимацию для контента блока
     tl.fromTo(content, { top: "-123px" },
-      { top: '0px', duration: 1 });
+      { top: '-80px', duration: 1 });
   });
 }
 

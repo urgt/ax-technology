@@ -284,19 +284,39 @@ if (video && play) {
 if ($(window).width() < 1000) {
   $('.project_bg').attr('data-speed', '1')
 }
-if ($(window).width() < 601) {
-  var tl1 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".projects__inner",
-      start: "top center", // Начало анимации, когда верх блока достигает верха окна
-      end: "bottom bottom", // Конец анимации, когда верх блока достигает верха окна
-      scrub: true, // Анимация будет следовать скроллу
-      markers: false, // Отображение маркеров ScrollTrigger для отладки
-    },
-  });
 
-  tl1.fromTo(".project_bg", { top: "0px" },
-    { top: '-80px', duration: 0.4 });
+
+
+
+
+
+
+
+
+
+if ($(window).width() < 601) {
+
+  let containers = document.querySelectorAll('.project__item');
+
+  containers.forEach(function (container) {
+    let content = container.querySelectorAll('.project_bg.mobi');
+    console.log(content);
+
+    // Создаем анимацию с помощью GSAP
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".projects", // Устанавливаем блок как триггер
+        start: 'top center', // Начало анимации при достижении верхней границы блока
+        end: 'bottom center', // Конец анимации при достижении нижней границы блока
+        scrub: 1, // Прокручиваем анимацию пропорционально скроллу
+        markers: true
+      },
+    });
+
+    // Устанавливаем анимацию для контента блока
+    tl.fromTo(content, { top: "0px" },
+      { top: '-80px', duration: 0.4 });
+  });
 }
 
 

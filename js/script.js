@@ -1,52 +1,3 @@
-//slider our projects
-
-// var swiper = new Swiper(".mySwiper", {
-//   draggable: true,
-//   grabCursor: true,
-//   allowTouchMove: false,
-//   autoplay: {
-//     delay: 0,
-//     disableOnInteraction: false,
-//   },
-//   speed: 5000,
-//   // mousewheel: {
-//   //     sensitivity: 1,
-//   //     releaseOnEdges: true,
-//   // },
-
-//   breakpoints: {
-//     // when window width is >= 320px
-//     320: {
-//       slidesPerView: 1,
-//       spaceBetween: 16,
-//       centeredSlides: true,
-//     },
-//     // when window width is >= 480px
-//     480: {
-//       slidesPerView: "1",
-//       spaceBetween: 32,
-//     },
-//     650: {
-//       slidesPerView: "2",
-//       spaceBetween: 32,
-//     },
-//     755: {
-//       slidesPerView: "3",
-//       spaceBetween: 32,
-//     },
-//     1000: {
-//       slidesPerView: "4",
-//       spaceBetween: 32,
-//     },
-//     1250: {
-//       slidesPerView: "6",
-//       spaceBetween: 32,
-//     },
-//   },
-// });
-
-//slider our team
-
 var swiper = new Swiper(".mySwiper2", {
   draggable: true,
   grabCursor: true,
@@ -90,12 +41,16 @@ ScrollSmoother.create({
 
 const myText = new SplitType(".anim-title");
 
-gsap.to(".char", {
-  y: 0,
-  stagger: 0.02,
-  delay: 0.2,
-  duration: 0.1,
-});
+if (myText && document.querySelector(".char")) {
+  gsap.to(".char", {
+    y: 0,
+    stagger: 0.02,
+    delay: 0.2,
+    duration: 0.1,
+  });
+}
+
+
 
 // custom cursor hovers
 
@@ -192,25 +147,15 @@ $(() => {
 
 if ($(window).width() <= 755) {
   $(".header .nav").hide();
-  // $(".vacation_subtitle").hide();
 }
 
-// $(".vacation_title").on("click", function () {
-//   if ($(window).width() < 755) {
-//     $(".vacation_subtitle")
-//       .not($(this).siblings(".vacation_subtitle"))
-//       .hide("slide");
-//     $(this).parent().find(".vacation_subtitle").slideToggle("fast");
-//   }
-// });
+
 
 $(window).resize(function () {
   if ($(window).width() <= 755) {
     $(".header .nav").hide();
-    // $(".vacation_subtitle").hide();
   } else {
     $(".header .nav").show();
-    // $(".vacation_subtitle").show();
   }
 });
 
@@ -279,57 +224,79 @@ if ($(window).width() >= 755) {
 const video = document.querySelector(".video_img");
 const play = document.querySelector(".play");
 
-video.addEventListener("click", function () {
-  if (video.paused) {
-    video.play();
-    play.style.display = "none";
-  } else {
-    video.pause();
-    play.style.display = "block";
-  }
-});
-
-play.addEventListener("click", function () {
-  if (video.paused) {
-    video.play();
-    play.style.display = "none";
-  } else {
-    video.pause();
-    play.style.display = "block";
-  }
-});
-
-var tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".video__inner",
-    start: "top center", // Начало анимации, когда верх блока достигает верха окна
-    end: "bottom bottom", // Конец анимации, когда верх блока достигает верха окна
-    scrub: true, // Анимация будет следовать скроллу
-    markers: false, // Отображение маркеров ScrollTrigger для отладки
-  },
-});
-
-
-
-if ($(window).width() > 999 && $(window).width() < 1300) {
-
-  document.querySelector(".video__inner").style.width = "1000px";
-  // Добавление шага анимации
-  tl.to(".video__inner", { width: "100%", duration: 0.5 });
-}
-
-if ($(window).width() > 1300) {
-  // Добавление шага анимации
-  tl.fromTo(
-    ".video__inner",
-    { width: "1200px" },
-    {
-      width: "100%",
-      duration: 0.5,
+if (video && play) {
+  video.addEventListener("click", function () {
+    if (video.paused) {
+      video.play();
+      play.style.display = "none";
+    } else {
+      video.pause();
+      play.style.display = "block";
     }
-  );
+  });
+
+  play.addEventListener("click", function () {
+    if (video.paused) {
+      video.play();
+      play.style.display = "none";
+    } else {
+      video.pause();
+      play.style.display = "block";
+    }
+  });
+
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".main_page .video__inner",
+      start: "top center", // Начало анимации, когда верх блока достигает верха окна
+      end: "bottom bottom", // Конец анимации, когда верх блока достигает верха окна
+      scrub: true, // Анимация будет следовать скроллу
+      markers: false, // Отображение маркеров ScrollTrigger для отладки
+    },
+  });
+
+
+
+  if ($(window).width() > 999 && $(window).width() < 1300) {
+
+    document.querySelector(".video__inner").style.width = "1000px";
+    // Добавление шага анимации
+    tl.to(".video__inner", { width: "100%", duration: 0.5 });
+  }
+
+  if ($(window).width() > 1300) {
+    // Добавление шага анимации
+    tl.fromTo(
+      ".main_page .video__inner",
+      { width: "1200px" },
+      {
+        width: "100%",
+        duration: 0.5,
+      }
+    );
+  }
 }
+
+
+
+
 
 if ($(window).width() < 1000) {
   $('.project_bg').attr('data-speed', '1')
 }
+if ($(window).width() < 601) {
+  var tl1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".projects__inner",
+      start: "top center", // Начало анимации, когда верх блока достигает верха окна
+      end: "bottom bottom", // Конец анимации, когда верх блока достигает верха окна
+      scrub: true, // Анимация будет следовать скроллу
+      markers: false, // Отображение маркеров ScrollTrigger для отладки
+    },
+  });
+
+  tl1.fromTo(".project_bg", { top: "0" },
+    { top: '-40px', duration: 0.4 });
+}
+
+

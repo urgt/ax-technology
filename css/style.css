@@ -1620,6 +1620,17 @@ input[type="file"]::file-selector-button:hover {
   width: 100%;
 }
 
+.ax_phase .ax_map_intro {
+  padding: calc(var(--section-margin) + 150px) 0;
+  margin-bottom: 0;
+}
+
+
+.ax_phase .video {
+  margin: 0;
+  background: none;
+}
+
 .ax_phase .project_item_title {
   text-align: center;
 }
@@ -1670,6 +1681,7 @@ input[type="file"]::file-selector-button:hover {
 
 .ax_phase .video__inner {
   top: 0;
+  margin: 0;
 }
 
 .ax-phase-stat-image img {
@@ -2066,7 +2078,7 @@ input[type="file"]::file-selector-button:hover {
 
   .title_and_descr {
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 32px;
   }
 
   .title_and_descr .title,
@@ -2156,12 +2168,22 @@ input[type="file"]::file-selector-button:hover {
     display: flex;
   }
 
+  .ax_phase .ax_map_intro {
+    padding: calc(var(--section-margin) + 100px) 0 30px;
+    margin-bottom: 0;
+  }
+
   .phase-cards__item {
     padding: 85px 25px;
   }
 
-  .ax-phase-image img {
-    margin-bottom: 92px;
+  .ax_phase .about_ax_capital {
+    padding: var(--section-margin) 0 0;
+  }
+
+  .ax_phase .about_ax_capital,
+  .ax_phase .title_and_descr {
+    margin-bottom: 50px;
   }
 
   .phase-cards {

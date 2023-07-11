@@ -314,8 +314,8 @@ if ($(window).width() < 601) {
     });
 
     // Устанавливаем анимацию для контента блока
-    tl.fromTo(content, { top: "-96px" },
-      { top: '-64px', duration: 1 });
+    tl.fromTo(content, { top: "-100px" },
+      { top: '-50px', duration: 1 });
   });
 }
 

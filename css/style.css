@@ -303,7 +303,6 @@ body {
   background-blend-mode: var(--bg-blend-1);
   min-height: 754px;
   display: flex;
-  justify-content: center;
   order: -5;
   overflow: hidden;
   position: relative;
@@ -318,7 +317,7 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 450vh;
+  width: 2450vh;
   height: 1200px;
   justify-content: space-around;
   transform: rotate(90deg);
@@ -1217,14 +1216,13 @@ input[type="file"]::file-selector-button:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
 
 .success_inner .lines {
-  width: 610vh;
+  width: 11610vh;
 }
 
 .top_two_sections {
@@ -1354,13 +1352,12 @@ input[type="file"]::file-selector-button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
   overflow: hidden;
 }
 
 .contacts_page .lines {
-  width: 250vh;
+  width: 1250vh;
 }
 
 .contacts_page .hiring_inner {

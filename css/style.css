@@ -1756,15 +1756,15 @@ input[type="file"]::file-selector-button:hover {
   gap: 25px;
 }
 
-.sticky_block {
-  padding-right: 30px;
+.content_column_left {
+  padding-right: 100px;
   position: -webkit-sticky;
   position: sticky;
   top: 30px;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding-right: 100px;
+  height: fit-content;
 }
 
 .single_vacation_title {
@@ -1791,7 +1791,7 @@ input[type="file"]::file-selector-button:hover {
   line-height: 150%;
 }
 
-.sticky_block a {
+.content_column_left a {
   text-align: center;
   font-size: 16px;
   font-style: normal;

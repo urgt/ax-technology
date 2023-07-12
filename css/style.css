@@ -494,6 +494,15 @@ body {
 }
 
 .video_wrap {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.main_page .video_wrap {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -503,6 +512,13 @@ body {
 }
 
 .video_img {
+  position: static;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.main_page .video_img {
   position: absolute;
   width: 100vw;
   height: 90vh;
@@ -515,7 +531,7 @@ body {
   cursor: pointer;
 }
 
-.main_page .play {
+.play {
   display: none;
 }
 
@@ -1692,6 +1708,76 @@ input[type="file"]::file-selector-button:hover {
   display: none;
 }
 
+.vacation-single {
+  background: var(--bg-type-1-2);
+  background-blend-mode: var(--bg-blend-1);
+}
+
+.vacation-single__inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--section-margin) 0;
+  overflow: hidden;
+}
+
+.vacation-single__inner .lines {
+  z-index: 0;
+}
+
+
+.button_go_back a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.button_go_back {
+  margin-bottom: 52px;
+}
+
+
+
+.vacation-single__content,
+.button_go_back {
+  z-index: 2;
+  width: 100%;
+}
+
+
+.vacation-single__content {
+  display: flex;
+  gap: 25px;
+}
+
+.sticky_block {
+  padding-right: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.single_vacation_title {
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+.location_info,
+.employment_info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
 @media (max-width: 1200px) {
   .container {
     padding-left: 20px !important;
@@ -1722,6 +1808,17 @@ input[type="file"]::file-selector-button:hover {
   .vacations_wrap a {
     max-width: 100%;
     width: 100%;
+  }
+
+  .main_page .video_wrap {
+    height: auto;
+  }
+
+  .main_page .video_img {
+    position: static;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
 
@@ -2266,9 +2363,8 @@ input[type="file"]::file-selector-button:hover {
   .email {
     width: 100%;
   }
-
-
 }
+
 
 @media (max-width: 510px) {
   .project__item {

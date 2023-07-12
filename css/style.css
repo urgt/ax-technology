@@ -1210,7 +1210,7 @@ input[type="file"]::file-selector-button:hover {
 }
 
 .success_inner {
-  padding-top: var(--section-margin);
+  padding-top: calc(var(--section-margin) + 100px);
   background: var(--bg-type-1-2);
   background-blend-mode: var(--bg-blend-1);
   position: relative;

@@ -765,7 +765,7 @@ body {
   display: flex;
   flex: 1;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 49px;
   will-change: transform;
   transition: .5s cubic-bezier(.05, .5, 0, 1);

@@ -306,6 +306,7 @@ body {
   order: -5;
   overflow: hidden;
   position: relative;
+  justify-content: center;
 }
 
 
